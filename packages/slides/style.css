@@ -1,0 +1,61 @@
+:root {
+  --slidev-code-padding: 8px 10px;
+  --slidev-code-background: #16161690 !important;
+}
+
+.dark #slide-content,
+#slide-content {
+  background-color: #0a0a0a !important;
+}
+
+/* Glow effect background */
+.slidev-layout {
+  position: relative;
+}
+
+.slidev-layout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(91, 139, 223, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(208, 46, 191, 0.12), transparent),
+    radial-gradient(ellipse 50% 30% at 50% 20%, rgba(170, 247, 255, 0.08), transparent);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Transitions */
+.slidev-vclick-target {
+  transition: opacity 500ms ease, filter 200ms ease, color 300ms ease;
+}
+
+.slidev-vclick-hidden {
+  opacity: 0;
+  pointer-events: none;
+  filter: blur(3px);
+}
+
+.fade-out-leave-active {
+  transition: opacity calc(var(--slidev-transition-duration) * 0.6) ease-out, filter 200ms ease;
+}
+
+.fade-out-enter-active {
+  transition: opacity calc(var(--slidev-transition-duration) * 0.8) ease-in, filter 200ms ease;
+  transition-delay: calc(var(--slidev-transition-duration) * 0.6);
+}
+
+.fade-out-enter-from,
+.fade-out-leave-to {
+  opacity: 0;
+  filter: blur(5px);
+}
+
+.slidev-code .line {
+  transition: opacity 200ms ease;
+}
+
+.slidev-code {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
