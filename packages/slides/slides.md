@@ -74,6 +74,37 @@ layout: center
 
 ---
 layout: center
+---
+
+<div class="max-w-3xl">
+  <h2 class="text-4xl font-bold mb-8 text-cyan-400">Why prepare your repo?</h2>
+  <div class="space-y-8">
+    <div class="flex items-start gap-6">
+      <div class="p-4 rounded-xl bg-cyan-400/10 border border-cyan-400/30 shrink-0">
+        <p class="text-3xl">🗄️</p>
+      </div>
+      <div>
+        <p class="text-2xl font-semibold mb-2">Think of it like database indexes</p>
+        <p class="text-lg opacity-70">Queries hit indexes for fast access — not full table scans.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-6">
+      <div class="p-4 rounded-xl bg-cyan-400/10 border border-cyan-400/30 shrink-0">
+        <p class="text-3xl">📁</p>
+      </div>
+      <div>
+        <p class="text-2xl font-semibold mb-2">Steering files = indexes for your repo</p>
+        <p class="text-lg opacity-70">The agent gets context fast instead of scanning everything.</p>
+      </div>
+    </div>
+    <div class="mt-8 p-6 rounded-xl bg-cyan-400/10 border border-cyan-400/30">
+      <p class="text-xl"><span class="text-cyan-400 font-semibold">Result:</span> Faster responses, better accuracy, less wasted tokens.</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
 class: text-center
 ---
 
