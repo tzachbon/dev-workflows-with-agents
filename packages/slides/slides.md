@@ -93,7 +93,7 @@ layout: center
         <p class="text-3xl">📁</p>
       </div>
       <div>
-        <p class="text-2xl font-semibold mb-2">Steering files = indexes for your repo</p>
+        <p class="text-2xl font-semibold mb-2">rule files = indexes for your repo</p>
         <p class="text-lg opacity-70">The agent gets context fast instead of scanning everything.</p>
       </div>
     </div>
@@ -117,24 +117,48 @@ class: text-center
 layout: center
 ---
 
+<div class="max-w-4xl">
+  <h2 class="text-4xl font-bold mb-6 text-purple-400">Rules</h2>
+  <p class="text-2xl mb-8">Instructions that guide how the agent behaves.</p>
+  <div class="grid grid-cols-3 gap-6">
+    <div class="p-5 rounded-xl bg-blue-400/10 border border-blue-400/30 text-center">
+      <p class="text-blue-400 font-semibold text-lg mb-2">User Rules</p>
+      <p class="opacity-70 text-sm">Your personal preferences</p>
+      <p class="opacity-50 text-xs mt-2">Apply to all your projects</p>
+    </div>
+    <div class="p-5 rounded-xl bg-cyan-400/10 border border-cyan-400/30 text-center">
+      <p class="text-cyan-400 font-semibold text-lg mb-2">Workspace Rules</p>
+      <p class="opacity-70 text-sm">Project-level guidance</p>
+      <p class="opacity-50 text-xs mt-2">Lives in repo, shared with team</p>
+    </div>
+    <div class="p-5 rounded-xl bg-pink-400/10 border border-pink-400/30 text-center">
+      <p class="text-pink-400 font-semibold text-lg mb-2">Subrules</p>
+      <p class="opacity-70 text-sm">Scoped to directories</p>
+      <p class="opacity-50 text-xs mt-2">Per-service or per-feature</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
 <div class="max-w-3xl">
-  <h2 class="text-4xl font-bold mb-8 text-cyan-400">Steering Files</h2>
-  <div class="space-y-6 text-xl leading-relaxed">
-    <p class="text-2xl">Markdown files that guide agent behavior.</p>
-    <p class="opacity-70">Written for the <span class="text-cyan-400 font-semibold">AI</span>, not humans.</p>
-    <div class="mt-8 p-6 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-sm opacity-50 mb-3">Examples</p>
-      <div class="space-y-2 font-mono text-lg">
-        <p><span class="text-cyan-400">AGENTS.md</span> — Project or directory-level guidance</p>
-        <p><span class="text-cyan-400">.cursorrules</span> — Cursor-specific rules</p>
-        <p><span class="text-cyan-400">CLAUDE.md</span> — Claude Code guidance</p>
-      </div>
+  <h2 class="text-4xl font-bold mb-4 text-cyan-400">Steering Files</h2>
+  <p class="text-xl mb-2">Rule files are also called <span class="text-cyan-400 font-semibold">steering files</span>.</p>
+  <p class="text-lg opacity-70 mb-6">They <em>steer</em> the agent in the direction you want.</p>
+  <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+    <p class="text-sm opacity-50 mb-3">Different tools, same concept:</p>
+    <div class="space-y-2 font-mono text-lg">
+      <p><span class="text-cyan-400">AGENTS.md</span> — Generic, works everywhere</p>
+      <p><span class="text-cyan-400">.cursorrules</span> — Cursor-specific</p>
+      <p><span class="text-cyan-400">CLAUDE.md</span> — Claude Code</p>
     </div>
   </div>
 </div>
 
 <ProTip position="top-right">
-  Write one <code>AGENTS.md</code> and symlink to <code>.cursorrules</code>, <code>CLAUDE.md</code>, etc. Update once, all vendors stay in sync.
+  Write one <code>AGENTS.md</code> and symlink the rest. Update once, all vendors stay in sync.
 </ProTip>
 
 ---
@@ -142,77 +166,55 @@ layout: center
 ---
 
 <div class="max-w-3xl">
-  <h2 class="text-4xl font-bold mb-8 text-cyan-400">What goes in a Steering File?</h2>
+  <h2 class="text-4xl font-bold mb-8 text-cyan-400">What goes in those files?</h2>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-1">Project purpose</p>
+      <p class="opacity-70 text-xs">What does this codebase do?</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-1">Entry points</p>
+      <p class="opacity-70 text-xs">Where does execution start?</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-1">Key locations</p>
+      <p class="opacity-70 text-xs">Services, utilities, configs</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-1">Domain knowledge</p>
+      <p class="opacity-70 text-xs">Business logic, patterns</p>
+    </div>
+    <div class="p-4 rounded-xl bg-red-400/10 border border-red-400/30 col-span-2">
+      <p class="text-red-400 font-semibold mb-1">What NOT to do</p>
+      <p class="opacity-70 text-xs">Anti-patterns, deprecated approaches, common mistakes</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-4xl font-bold mb-6 text-pink-400">Commands</h2>
+  <p class="text-xl mb-6">Explicit instructions prefixed with <span class="font-mono text-pink-400">/</span></p>
   <div class="grid grid-cols-2 gap-6">
     <div class="p-5 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-2">Project purpose</p>
-      <p class="opacity-70 text-sm">What does this codebase do?</p>
-    </div>
-    <div class="p-5 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-2">Entry points</p>
-      <p class="opacity-70 text-sm">Where does execution start?</p>
-    </div>
-    <div class="p-5 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-2">Key locations</p>
-      <p class="opacity-70 text-sm">Where to find services, utilities, configs</p>
-    </div>
-    <div class="p-5 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-2">Domain knowledge</p>
-      <p class="opacity-70 text-sm">Business logic, patterns, conventions</p>
-    </div>
-    <div class="p-5 rounded-xl bg-white/5 border border-white/10 col-span-2">
-      <p class="text-red-400 font-semibold mb-2">What NOT to do</p>
-      <p class="opacity-70 text-sm">Anti-patterns, deprecated approaches, common mistakes</p>
-    </div>
-  </div>
-</div>
-
----
-layout: center
----
-
-<div class="max-w-3xl">
-  <h2 class="text-4xl font-bold mb-8 text-purple-400">Rules</h2>
-  <div class="space-y-6 text-xl leading-relaxed">
-    <p class="text-2xl">Specific directives that constrain agent behavior.</p>
-    <p class="opacity-70">Rules live in steering files or IDE settings.</p>
-    <div class="mt-8 grid grid-cols-2 gap-4">
-      <div class="p-5 rounded-xl bg-white/5 border border-white/10">
-        <p class="text-purple-400 font-semibold mb-2">Workspace rules</p>
-        <p class="opacity-70 text-sm">Apply to entire project</p>
-      </div>
-      <div class="p-5 rounded-xl bg-white/5 border border-white/10">
-        <p class="text-purple-400 font-semibold mb-2">User rules</p>
-        <p class="opacity-70 text-sm">Personal preferences, all projects</p>
-      </div>
-      <div class="p-5 rounded-xl bg-white/5 border border-white/10">
-        <p class="text-purple-400 font-semibold mb-2">Always-applied</p>
-        <p class="opacity-70 text-sm">Active regardless of context</p>
-      </div>
-      <div class="p-5 rounded-xl bg-white/5 border border-white/10">
-        <p class="text-purple-400 font-semibold mb-2">Auto-attached</p>
-        <p class="opacity-70 text-sm">Activate based on file patterns</p>
+      <p class="text-pink-400 font-semibold mb-3">Native (from vendor)</p>
+      <div class="space-y-2 font-mono text-base">
+        <p><span class="text-pink-400">/plan</span> — Break down a task</p>
+        <p><span class="text-pink-400">/compact</span> — Compress context</p>
+        <p><span class="text-pink-400">/summarize</span> — Summarize conversation</p>
       </div>
     </div>
-  </div>
-</div>
-
----
-layout: center
----
-
-<div class="max-w-3xl">
-  <h2 class="text-4xl font-bold mb-8 text-pink-400">Commands</h2>
-  <div class="space-y-6 text-xl leading-relaxed">
-    <p class="text-2xl">Explicit instructions that trigger agent behaviors.</p>
-    <p class="opacity-70">Usually prefixed with <span class="font-mono text-pink-400">/</span></p>
-    <div class="mt-8 p-6 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-sm opacity-50 mb-4">In Cursor</p>
-      <div class="space-y-3 font-mono text-lg">
-        <p><span class="text-pink-400">/edit</span> — Edit selected code</p>
-        <p><span class="text-pink-400">/chat</span> — Start conversation</p>
-        <p><span class="text-pink-400">/agent</span> — Full agent mode with tool access</p>
+    <div class="p-5 rounded-xl bg-pink-400/10 border border-pink-400/30">
+      <p class="text-pink-400 font-semibold mb-3">Custom (you create)</p>
+      <div class="space-y-2 font-mono text-base">
+        <p><span class="text-pink-400">/clean-flags</span> — Remove feature flags</p>
+        <p><span class="text-pink-400">/gen-docs</span> — Generate documentation</p>
+        <p><span class="text-pink-400">/cleanup</span> — Clean up comments</p>
       </div>
+      <p class="opacity-50 text-xs mt-3">Anything you repeat → make it a command</p>
     </div>
   </div>
 </div>
@@ -230,7 +232,7 @@ layout: center
         <p class="opacity-90">Files you've opened</p>
       </div>
       <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-        <p class="opacity-90">Steering files & rules</p>
+        <p class="opacity-90">Rule files</p>
       </div>
       <div class="p-4 rounded-xl bg-white/5 border border-white/10">
         <p class="opacity-90">Conversation history</p>
