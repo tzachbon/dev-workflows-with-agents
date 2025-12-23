@@ -165,30 +165,43 @@ layout: center
 layout: center
 ---
 
-<div class="max-w-3xl">
-  <h2 class="text-4xl font-bold mb-8 text-cyan-400">What goes in those files?</h2>
-  <div class="grid grid-cols-2 gap-4">
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-1">Project purpose</p>
-      <p class="opacity-70 text-xs">What does this codebase do?</p>
-    </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-1">Entry points</p>
-      <p class="opacity-70 text-xs">Where does execution start?</p>
-    </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-1">Key locations</p>
-      <p class="opacity-70 text-xs">Services, utilities, configs</p>
-    </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-1">Domain knowledge</p>
-      <p class="opacity-70 text-xs">Business logic, patterns</p>
-    </div>
-    <div class="p-4 rounded-xl bg-red-400/10 border border-red-400/30 col-span-2">
-      <p class="text-red-400 font-semibold mb-1">What NOT to do</p>
-      <p class="opacity-70 text-xs">Anti-patterns, deprecated approaches, common mistakes</p>
-    </div>
+<div class="max-w-4xl">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="px-3 py-1 rounded-md bg-cyan-400/20 text-cyan-400 font-mono text-sm">AGENTS.md</div>
+    <p class="opacity-50 text-sm">Real example from a production monorepo</p>
   </div>
+  <div class="p-5 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-xs leading-relaxed">
+    <p class="text-cyan-400 mb-2"># Product Experience Backend</p>
+    <p class="opacity-60 mb-3">Monorepo using NPM workspaces, Turbo, Fastify, TypeScript, Vitest, Biome.</p>
+    <p class="text-cyan-400 mb-1">## Commands</p>
+    <p class="opacity-60 mb-3"><span class="text-green-400">`npm ci`</span> · <span class="text-green-400">`npm run build`</span> · <span class="text-green-400">`npm run test`</span> · <span class="text-green-400">`npm run lint`</span></p>
+    <p class="text-cyan-400 mb-1">## Code Style</p>
+    <p class="opacity-60">Named exports only · No <span class="text-red-400">console.*</span> use logger · No direct <span class="text-red-400">process.env</span></p>
+    <p class="opacity-60 mb-3">Include <span class="text-yellow-400">.ts</span> extensions · Semicolons · Single quotes</p>
+    <p class="text-cyan-400 mb-1">## Structure</p>
+    <p class="opacity-60 mb-3"><span class="text-yellow-400">packages/</span> shared libs · <span class="text-yellow-400">services/</span> deployable services</p>
+    <p class="text-red-400 mb-1">## Never</p>
+    <p class="opacity-60">Manually edit OpenAPI specs — source of truth is Fastify route schemas</p>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-3 text-cyan-400">Rule files at every level</h2>
+  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-xs leading-tight">
+    <p class="opacity-70">📁 <span class="text-white">product-experience-backend/</span></p>
+    <p class="opacity-70 ml-4">├── <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← monorepo standards</span></p>
+    <p class="opacity-70 ml-4">├── 📁 services/</p>
+    <p class="opacity-70 ml-8">│   ├── saved-filters/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← routes, schemas</span></p>
+    <p class="opacity-70 ml-8">│   └── notifications/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← different rules</span></p>
+    <p class="opacity-70 ml-4">└── 📁 packages/</p>
+    <p class="opacity-70 ml-8">    ├── logger/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← API, patterns</span></p>
+    <p class="opacity-70 ml-8">    └── server-utils/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← utilities</span></p>
+  </div>
+  <p class="text-sm opacity-60 mt-3 text-center">Each directory has its own context. Agent picks up the nearest one.</p>
 </div>
 
 ---
