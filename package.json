@@ -1,0 +1,10 @@
+{
+  "name": "dev-workflow-with-agents",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces"
+  }
+}
