@@ -71,3 +71,171 @@ layout: center
     <p class="text-sm opacity-50 mt-4">The actual workflow</p>
   </div>
 </div>
+
+---
+layout: center
+class: text-center
+---
+
+<div class="flex flex-col items-center gap-4">
+  <p class="text-2xl opacity-50">But first</p>
+  <p class="text-5xl font-bold">Let's get the vocabulary right</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <h2 class="text-4xl font-bold mb-8 text-cyan-400">Steering Files</h2>
+  <div class="space-y-6 text-xl leading-relaxed">
+    <p class="text-2xl">Markdown files that guide agent behavior.</p>
+    <p class="opacity-70">Written for the <span class="text-cyan-400 font-semibold">AI</span>, not humans.</p>
+    <div class="mt-8 p-6 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-sm opacity-50 mb-3">Examples</p>
+      <div class="space-y-2 font-mono text-lg">
+        <p><span class="text-cyan-400">AGENTS.md</span> — Project or directory-level guidance</p>
+        <p><span class="text-cyan-400">.cursorrules</span> — Cursor-specific rules</p>
+        <p><span class="text-cyan-400">CLAUDE.md</span> — Claude Code guidance</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ProTip position="top-right">
+  Write one <code>AGENTS.md</code> and symlink to <code>.cursorrules</code>, <code>CLAUDE.md</code>, etc. Update once, all vendors stay in sync.
+</ProTip>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <h2 class="text-4xl font-bold mb-8 text-cyan-400">What goes in a Steering File?</h2>
+  <div class="grid grid-cols-2 gap-6">
+    <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">Project purpose</p>
+      <p class="opacity-70 text-sm">What does this codebase do?</p>
+    </div>
+    <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">Entry points</p>
+      <p class="opacity-70 text-sm">Where does execution start?</p>
+    </div>
+    <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">Key locations</p>
+      <p class="opacity-70 text-sm">Where to find services, utilities, configs</p>
+    </div>
+    <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">Domain knowledge</p>
+      <p class="opacity-70 text-sm">Business logic, patterns, conventions</p>
+    </div>
+    <div class="p-5 rounded-xl bg-white/5 border border-white/10 col-span-2">
+      <p class="text-red-400 font-semibold mb-2">What NOT to do</p>
+      <p class="opacity-70 text-sm">Anti-patterns, deprecated approaches, common mistakes</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <h2 class="text-4xl font-bold mb-8 text-purple-400">Rules</h2>
+  <div class="space-y-6 text-xl leading-relaxed">
+    <p class="text-2xl">Specific directives that constrain agent behavior.</p>
+    <p class="opacity-70">Rules live in steering files or IDE settings.</p>
+    <div class="mt-8 grid grid-cols-2 gap-4">
+      <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-purple-400 font-semibold mb-2">Workspace rules</p>
+        <p class="opacity-70 text-sm">Apply to entire project</p>
+      </div>
+      <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-purple-400 font-semibold mb-2">User rules</p>
+        <p class="opacity-70 text-sm">Personal preferences, all projects</p>
+      </div>
+      <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-purple-400 font-semibold mb-2">Always-applied</p>
+        <p class="opacity-70 text-sm">Active regardless of context</p>
+      </div>
+      <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-purple-400 font-semibold mb-2">Auto-attached</p>
+        <p class="opacity-70 text-sm">Activate based on file patterns</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <h2 class="text-4xl font-bold mb-8 text-pink-400">Commands</h2>
+  <div class="space-y-6 text-xl leading-relaxed">
+    <p class="text-2xl">Explicit instructions that trigger agent behaviors.</p>
+    <p class="opacity-70">Usually prefixed with <span class="font-mono text-pink-400">/</span></p>
+    <div class="mt-8 p-6 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-sm opacity-50 mb-4">In Cursor</p>
+      <div class="space-y-3 font-mono text-lg">
+        <p><span class="text-pink-400">/edit</span> — Edit selected code</p>
+        <p><span class="text-pink-400">/chat</span> — Start conversation</p>
+        <p><span class="text-pink-400">/agent</span> — Full agent mode with tool access</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <h2 class="text-4xl font-bold mb-8 text-amber-400">Context</h2>
+  <div class="space-y-6 text-xl leading-relaxed">
+    <p class="text-2xl">Everything the agent can "see" when processing.</p>
+    <div class="mt-6 grid grid-cols-2 gap-4 text-lg">
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <p class="opacity-90">Files you've opened</p>
+      </div>
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <p class="opacity-90">Steering files & rules</p>
+      </div>
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <p class="opacity-90">Conversation history</p>
+      </div>
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <p class="opacity-90">System prompts</p>
+      </div>
+    </div>
+    <div class="mt-8 p-6 rounded-xl bg-amber-400/10 border border-amber-400/30">
+      <p class="text-amber-400 font-semibold">Key insight:</p>
+      <p class="opacity-90 mt-2">Context has a limit. Lean, focused context beats dumping everything in.</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+<div class="flex flex-col items-center gap-6">
+  <p class="text-2xl opacity-50">The Core Insight</p>
+  <p class="text-6xl font-bold text-amber-400">Context is everything.</p>
+  <div class="mt-8 text-xl opacity-70 space-y-2">
+    <p>Provide context faster than the AI can find it</p>
+    <p>Lean context beats bloated context</p>
+    <p>Explicit beats implicit</p>
+  </div>
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+<div class="flex flex-col items-center gap-4">
+  <p class="text-2xl opacity-50">Now let's dive into</p>
+  <p class="text-5xl font-bold text-cyan-400">Pillar 1: Prepare Your Repo</p>
+</div>
