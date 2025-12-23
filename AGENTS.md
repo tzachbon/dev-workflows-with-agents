@@ -6,45 +6,38 @@ A workshop repo for slides and hands-on exercises that teach developers how to w
 
 Developers across web, mobile, and back-end stacks. Content is mostly stack-agnostic with practical examples.
 
+Assumed knowledge: LLMs, agents, tools. We skip the basics and focus on practical application.
+
 ## Tools
 
-- Cursor
+- Cursor (primary demo tool)
 - Claude Code
+- Slidev (presentation)
+- RSPress (cookbook/documentation)
 
-## Workshop Format
+## Workshop Structure
 
-Each engineer brings one or two real tasks they need to complete. We guide them through best practices for completing those tasks fully with AI, no manual coding.
+1. **Presentation (30 min)** - Core principles and tooling orientation
+2. **Hands-on session** - Each engineer works on their real tasks with guidance
+3. **Cookbook** - RSPress documentation site as reference during hands-on
 
-The goal: help developers understand a workflow they can replicate. Define the task clearly, break it into steps, and let the agent execute with minimal intervention.
+---
 
-## Core Concepts
+## Two Pillars
 
-### Context Engineering
+The core principles of working with agents break into two parts:
 
-Context is everything. Smaller, focused context produces better output than dumping an entire project into the conversation. The key is giving the AI exactly what it needs, nothing more.
+### Pillar 1: Prepare Your Repo
 
-### Preparing Your Repo for AI
+Make your codebase a place where agents can thrive. Structure, configuration, and context boundaries.
 
-Before working with agents, your codebase should be structured for them:
+### Pillar 2: Work With Your Agent
 
-- Agent configuration files (MD files describing agent roles and expected outputs)
-- Sub-agents for different domains (e.g., separate agents for filters, preferences, utilities)
-- Clear directory structure so agents can work on isolated scopes
+The actual workflow when executing tasks. Planning, prompting, reviewing, iterating.
 
-### Sub-Agents Pattern
+---
 
-Large monolithic agents don't work well. Instead, use an orchestrator that delegates to specialized sub-agents:
+See dedicated files for each pillar:
 
-- Each sub-agent has a dedicated role and limited scope
-- Smaller context per agent leads to more deterministic results
-- Easier to review and validate output
-
-## Workshop Flow
-
-1. **Bring a real task** - Each participant opens a ticket or feature they need to complete
-2. **Plan with the agent** - Use planning mode in Cursor to break down the work
-3. **Choose the right model** - Match model capabilities to task complexity
-4. **Divide the work** - Split into small, reviewable chunks
-5. **Review and iterate** - Check AI output, refine context, repeat
-
-The hands-on approach is critical. Reading about AI workflows doesn't break the barrier. Sitting down with a real task and working through it does.
+- [Pillar 1: Prepare Your Repo](./PILLAR_1_PREPARE_REPO.md)
+- [Pillar 2: Work With Your Agent](./PILLAR_2_WORK_WITH_AGENT.md)
