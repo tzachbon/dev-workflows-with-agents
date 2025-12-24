@@ -38,7 +38,7 @@ class: text-center
 
 <div class="flex flex-col justify-center items-center">
   <p class="text-5xl font-light leading-relaxed">"The problem isn't the AI.</p>
-  <p class="text-5xl font-light leading-relaxed text-purple-400">It's who we use it."</p>
+  <p class="text-5xl font-light leading-relaxed text-purple-400">It's how we use it."</p>
   <p class="mt-10 text-xl opacity-50">— @me </p>
 </div>
 
