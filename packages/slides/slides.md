@@ -190,25 +190,6 @@ layout: center
 ---
 
 <div class="max-w-4xl">
-  <h2 class="text-3xl font-bold mb-3 text-cyan-400">Rule files at every level</h2>
-  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-xs leading-tight">
-    <p class="opacity-70">📁 <span class="text-white">product-experience-backend/</span></p>
-    <p class="opacity-70 ml-4">├── <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← monorepo standards</span></p>
-    <p class="opacity-70 ml-4">├── 📁 services/</p>
-    <p class="opacity-70 ml-8">│   ├── saved-filters/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← routes, schemas</span></p>
-    <p class="opacity-70 ml-8">│   └── notifications/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← different rules</span></p>
-    <p class="opacity-70 ml-4">└── 📁 packages/</p>
-    <p class="opacity-70 ml-8">    ├── logger/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← API, patterns</span></p>
-    <p class="opacity-70 ml-8">    └── server-utils/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← utilities</span></p>
-  </div>
-  <p class="text-sm opacity-60 mt-3 text-center">Each directory has its own context. Agent picks up the nearest one.</p>
-</div>
-
----
-layout: center
----
-
-<div class="max-w-4xl">
   <h2 class="text-4xl font-bold mb-6 text-pink-400">Commands</h2>
   <p class="text-xl mb-6">Explicit instructions prefixed with <span class="font-mono text-pink-400">/</span></p>
   <div class="grid grid-cols-2 gap-6">
@@ -259,54 +240,165 @@ layout: center
 
 ---
 layout: center
----
-
-<div class="max-w-3xl">
-  <h2 class="text-4xl font-bold mb-8 text-amber-400">Context</h2>
-  <div class="space-y-6 text-xl leading-relaxed">
-    <p class="text-2xl">Everything the agent can "see" when processing.</p>
-    <div class="mt-6 grid grid-cols-2 gap-4 text-lg">
-      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-        <p class="opacity-90">Files you've opened</p>
-      </div>
-      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-        <p class="opacity-90">Rule files</p>
-      </div>
-      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-        <p class="opacity-90">Conversation history</p>
-      </div>
-      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-        <p class="opacity-90">System prompts</p>
-      </div>
-    </div>
-    <div class="mt-8 p-6 rounded-xl bg-amber-400/10 border border-amber-400/30">
-      <p class="text-amber-400 font-semibold">Key insight:</p>
-      <p class="opacity-90 mt-2">Context has a limit. Lean, focused context beats dumping everything in.</p>
-    </div>
-  </div>
-</div>
-
----
-layout: center
-class: text-center
----
-
-<div class="flex flex-col items-center gap-6">
-  <p class="text-2xl opacity-50">The Core Insight</p>
-  <p class="text-6xl font-bold text-amber-400">Context is everything.</p>
-  <div class="mt-8 text-xl opacity-70 space-y-2">
-    <p>Provide context faster than the AI can find it</p>
-    <p>Lean context beats bloated context</p>
-    <p>Explicit beats implicit</p>
-  </div>
-</div>
-
----
-layout: center
 class: text-center
 ---
 
 <div class="flex flex-col items-center gap-4">
-  <p class="text-2xl opacity-50">Now let's dive into</p>
-  <p class="text-5xl font-bold text-cyan-400">Pillar 1: Prepare Your Repo</p>
+  <p class="text-lg opacity-50">Pillar 1</p>
+  <p class="text-5xl font-bold text-cyan-400">Prepare Your Repo</p>
+  <p class="text-xl opacity-60 mt-4">Index your codebase for the agent</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <h2 class="text-3xl font-bold mb-6 text-cyan-400">The Core Principle</h2>
+  <div class="p-6 rounded-xl bg-cyan-400/10 border border-cyan-400/30 mb-6">
+    <p class="text-2xl leading-relaxed">You're <span class="text-cyan-400 font-semibold">indexing</span> your repo for the agent.</p>
+    <p class="text-xl opacity-70 mt-3">Do it once. Agent reuses it forever.</p>
+  </div>
+  <div class="space-y-4 text-lg">
+    <p class="opacity-80">Without indexes → agent scans everything, burns tokens, guesses</p>
+    <p class="opacity-80">With indexes → agent finds context instantly, accurate responses</p>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-cyan-400">What goes in rule files?</h2>
+  <p class="text-lg opacity-60 mb-5">Things tooling <span class="text-cyan-400">can't</span> enforce automatically</p>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">Context</p>
+      <p class="opacity-60 text-sm">"Monorepo with NPM workspaces, Turbo, Fastify"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">Structure</p>
+      <p class="opacity-60 text-sm">"Services in <code>services/</code>, shared libs in <code>packages/</code>"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">Commands</p>
+      <p class="opacity-60 text-sm">"Use <code>--filter</code> for specific packages"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">Tools to use</p>
+      <p class="opacity-60 text-sm">"For logging use <code>@adsk/logger</code>"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">External links</p>
+      <p class="opacity-60 text-sm">Design review, wiki, Figma, API docs</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">Domain knowledge</p>
+      <p class="opacity-60 text-sm">"Feature flags managed in LaunchDarkly"</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-cyan-400">Let tooling do enforcement</h2>
+  <p class="text-lg opacity-60 mb-6">Don't write "never do X" — let your tools catch it</p>
+  <div class="grid grid-cols-3 gap-4">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-2xl mb-2">🔧</p>
+      <p class="text-cyan-400 font-semibold">Linters</p>
+      <p class="opacity-60 text-xs mt-2">ESLint, SwiftLint, ktlint, Ruff</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-2xl mb-2">📘</p>
+      <p class="text-cyan-400 font-semibold">Static Analysis</p>
+      <p class="opacity-60 text-xs mt-2">TypeScript, mypy, detekt</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-2xl mb-2">🎨</p>
+      <p class="text-cyan-400 font-semibold">Formatters</p>
+      <p class="opacity-60 text-xs mt-2">Prettier, swift-format, ktfmt</p>
+    </div>
+  </div>
+  <div class="mt-6 p-4 rounded-xl bg-cyan-400/10 border border-cyan-400/30">
+    <p class="text-center">Agent sees lint errors → learns the rules automatically</p>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-3 text-cyan-400">Rule files at every level</h2>
+  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-xs leading-tight">
+    <p class="opacity-70">📁 <span class="text-white">product-experience-backend/</span></p>
+    <p class="opacity-70 ml-4">├── <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← monorepo standards</span></p>
+    <p class="opacity-70 ml-4">├── 📁 services/</p>
+    <p class="opacity-70 ml-8">│   ├── saved-filters/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← routes, schemas, links</span></p>
+    <p class="opacity-70 ml-8">│   └── notifications/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← different context</span></p>
+    <p class="opacity-70 ml-4">└── 📁 packages/</p>
+    <p class="opacity-70 ml-8">    ├── logger/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← API, patterns</span></p>
+    <p class="opacity-70 ml-8">    └── server-utils/ → <span class="text-cyan-400 font-semibold">AGENTS.md</span> <span class="text-white/40">← utilities</span></p>
+  </div>
+  <p class="text-sm opacity-60 mt-3 text-center">Agent picks up the nearest rule file. More specific = more relevant.</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="text-white/40">📂</span>
+    <span class="text-lg opacity-60">Inside</span>
+    <div class="px-3 py-1 rounded-md bg-cyan-400/20 text-cyan-400 font-mono text-sm">services/saved-filters/AGENTS.md</div>
+  </div>
+  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm leading-relaxed">
+    <p class="text-cyan-400 mb-2"># Saved Filters Service</p>
+    <p class="text-cyan-400 mb-1">## Links</p>
+    <p class="opacity-60">• <span class="text-blue-400">[Design Review](https://wiki.company.com/saved-filters-dr)</span></p>
+    <p class="opacity-60">• <span class="text-blue-400">[API Spec](https://api-docs.company.com/saved-filters)</span></p>
+    <p class="opacity-60 mb-2">• <span class="text-blue-400">[Figma Designs](https://figma.com/file/xxx)</span></p>
+    <p class="text-cyan-400 mb-1">## Context</p>
+    <p class="opacity-60 mb-2">REST API for user-saved search filters. Uses Postgres.</p>
+    <p class="text-cyan-400 mb-1">## Tools</p>
+    <p class="opacity-60">• Validation: <span class="text-green-400">@adsk/validation</span></p>
+    <p class="opacity-60">• Database: <span class="text-green-400">@adsk/db-client</span></p>
+    <p class="opacity-60">• Auth: <span class="text-green-400">@adsk/auth-middleware</span></p>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <h2 class="text-3xl font-bold mb-6 text-cyan-400">Pillar 1 Checklist</h2>
+  <div class="space-y-3 text-lg">
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Root <code class="text-cyan-400">AGENTS.md</code> with project overview</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Per-service rule files with links to external docs</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Linting configured (ESLint, Biome, TypeScript strict)</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Clear entry points (Makefile, npm scripts)</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Type hints on public interfaces</span>
+    </div>
+  </div>
 </div>
