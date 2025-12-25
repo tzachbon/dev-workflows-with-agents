@@ -390,11 +390,11 @@ layout: center
     </div>
     <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>Linting configured (ESLint, Biome, TypeScript strict)</span>
+      <span>Linting and static analysis configured</span>
     </div>
     <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>Clear entry points (Makefile, npm scripts)</span>
+      <span>Clear entry points documented</span>
     </div>
     <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
