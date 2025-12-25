@@ -237,6 +237,31 @@ layout: center
 ---
 
 <div class="max-w-3xl">
+  <div class="flex items-center gap-3 mb-4">
+    <h2 class="text-3xl font-bold text-green-400">Skills</h2>
+    <span class="px-2 py-1 rounded bg-green-400/20 text-green-400 text-xs font-semibold">Advanced</span>
+    <span class="px-2 py-1 rounded bg-yellow-400/20 text-yellow-400 text-xs font-semibold">Experimental</span>
+  </div>
+  <p class="text-xl mb-6">Modular capabilities that package instructions, scripts, and resources for specialized tasks.</p>
+  <div class="p-5 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm mb-6">
+    <p class="opacity-50 text-xs mb-2">skills/generate-report/</p>
+    <p class="opacity-70">├── SKILL.md <span class="text-white/40">← instructions + when to use</span></p>
+    <p class="opacity-70">├── template.xlsx</p>
+    <p class="opacity-70">├── format-data.py</p>
+    <p class="opacity-70">└── brand-guidelines.md</p>
+  </div>
+  <div class="space-y-3 text-lg">
+    <p class="opacity-70">• Agent decides when to load based on task relevance</p>
+    <p class="opacity-70">• Can include executable scripts and templates</p>
+    <p class="opacity-70">• Encapsulates organizational knowledge and procedures</p>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
   <h2 class="text-4xl font-bold mb-8 text-amber-400">Context</h2>
   <div class="space-y-6 text-xl leading-relaxed">
     <p class="text-2xl">Everything the agent can "see" when processing.</p>
