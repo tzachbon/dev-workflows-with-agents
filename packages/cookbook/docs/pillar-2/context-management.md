@@ -6,6 +6,8 @@ Keep conversations short. Manage what the agent sees.
 
 LLMs struggle with information buried in long conversations.
 
+![Lost in the Middle](/lost-in-the-middle.png)
+
 Important context at the start or middle of a conversation gets "forgotten" as the conversation grows. The model pays more attention to recent content and the very beginning.
 
 ## The Solution: Keep It Fresh

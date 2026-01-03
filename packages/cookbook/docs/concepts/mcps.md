@@ -34,6 +34,8 @@ The agent reads the source directly.
 
 ## The Tradeoff: Context Bloat
 
+![MCP Context Bloat](/mcp-context-bloat.jpeg)
+
 :::warning
 More MCPs = less context for your actual work.
 :::

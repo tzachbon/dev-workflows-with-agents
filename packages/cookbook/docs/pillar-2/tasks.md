@@ -2,6 +2,8 @@
 
 Break work into atomic units with full context.
 
+![Slice of Cake - Break into small pieces](/slice-of-cake.png)
+
 ## Why Break Into Tasks
 
 Large prompts fail. The agent loses focus, makes mistakes, or goes off track.
