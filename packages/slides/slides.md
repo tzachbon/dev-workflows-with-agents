@@ -557,3 +557,320 @@ layout: center
     </div>
   </div>
 </div>
+
+---
+layout: center
+class: text-center
+---
+
+<div class="pillar-card">
+  <div class="pillar-number">2</div>
+  <h2 class="text-4xl font-bold mb-4">Work With Your Agent</h2>
+  <p class="text-xl opacity-60">The execution workflow</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-5xl">
+  <h2 class="text-3xl font-bold mb-6 text-red-400 text-center">What doesn't work</h2>
+  <div class="grid grid-cols-2 gap-8 items-center">
+    <div>
+      <p class="text-xl opacity-80 mb-4">"Slice a piece of cake"</p>
+      <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30 mb-4">
+        <p class="text-red-400 font-semibold mb-2">Vague prompts</p>
+        <p class="opacity-60 text-sm">"Fix my bug"</p>
+        <p class="opacity-60 text-sm">"Build this feature"</p>
+        <p class="opacity-60 text-sm">"Make it work"</p>
+      </div>
+      <p class="text-sm opacity-60">The LLM doesn't have your mental model.<br/>It will interpret literally.</p>
+    </div>
+    <div class="flex items-center justify-center">
+      <img src="/images/slice-of-cake.png" class="rounded-xl max-h-72 shadow-2xl" />
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl text-center">
+  <h2 class="text-4xl font-bold mb-6 text-amber-400">Context is everything</h2>
+  <p class="text-2xl mb-8 opacity-80">The agent only knows what you show it.</p>
+  <div class="grid grid-cols-2 gap-6 text-left">
+    <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30">
+      <p class="text-red-400 font-semibold mb-2">❌ What you assume</p>
+      <p class="opacity-60 text-sm">"It should know the codebase"</p>
+      <p class="opacity-60 text-sm">"It remembers our last chat"</p>
+      <p class="opacity-60 text-sm">"It understands the business"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/30">
+      <p class="text-green-400 font-semibold mb-2">✓ What actually works</p>
+      <p class="opacity-60 text-sm">Attach relevant files</p>
+      <p class="opacity-60 text-sm">Provide explicit context</p>
+      <p class="opacity-60 text-sm">Be specific about intent</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-4xl font-bold mb-4 text-cyan-400">Spec-driven development</h2>
+  <p class="text-xl opacity-60 mb-8">The solution: structure before execution</p>
+  <div class="flex items-center justify-center gap-4 text-lg">
+    <div class="px-4 py-3 rounded-xl bg-cyan-400/20 border border-cyan-400/30 text-cyan-400 font-semibold">Requirements</div>
+    <span class="text-2xl opacity-40">→</span>
+    <div class="px-4 py-3 rounded-xl bg-purple-400/20 border border-purple-400/30 text-purple-400 font-semibold">Plan</div>
+    <span class="text-2xl opacity-40">→</span>
+    <div class="px-4 py-3 rounded-xl bg-pink-400/20 border border-pink-400/30 text-pink-400 font-semibold">Design</div>
+    <span class="text-2xl opacity-40">→</span>
+    <div class="px-4 py-3 rounded-xl bg-amber-400/20 border border-amber-400/30 text-amber-400 font-semibold">Tasks</div>
+    <span class="text-2xl opacity-40">→</span>
+    <div class="px-4 py-3 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 font-semibold">Execute</div>
+  </div>
+  <p class="text-center mt-8 opacity-60">Define what you want before asking the agent to build it.</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <div class="flex items-center gap-4 mb-6">
+    <div class="w-12 h-12 rounded-full bg-cyan-400/20 flex items-center justify-center text-cyan-400 font-bold text-xl">1</div>
+    <h2 class="text-3xl font-bold text-cyan-400">Define requirements</h2>
+  </div>
+  <p class="text-xl opacity-60 mb-6">What are you trying to achieve? Write it down.</p>
+  <div class="p-5 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm">
+    <p class="text-cyan-400 mb-2">## Requirements</p>
+    <p class="opacity-70">- Users can save filter presets</p>
+    <p class="opacity-70">- Presets persist across sessions</p>
+    <p class="opacity-70">- Presets can be shared via URL</p>
+    <p class="opacity-70">- Maximum 50 presets per user</p>
+  </div>
+  <p class="text-sm opacity-60 mt-4 text-center">Be explicit. The agent will implement exactly what you write.</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <div class="flex items-center gap-4 mb-6">
+    <div class="w-12 h-12 rounded-full bg-purple-400/20 flex items-center justify-center text-purple-400 font-bold text-xl">2</div>
+    <h2 class="text-3xl font-bold text-purple-400">Plan and iterate</h2>
+  </div>
+  <p class="text-xl opacity-60 mb-6">Think through your approach. Refine your understanding.</p>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-purple-400 font-semibold mb-2">Use /plan mode</p>
+      <p class="opacity-60 text-sm">Agent analyzes without executing. Proposes approach.</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-purple-400 font-semibold mb-2">Ask clarifying questions</p>
+      <p class="opacity-60 text-sm">"What edge cases should we handle?"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-purple-400 font-semibold mb-2">Iterate on the plan</p>
+      <p class="opacity-60 text-sm">"Actually, let's use Redis instead of DB"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-purple-400 font-semibold mb-2">Validate assumptions</p>
+      <p class="opacity-60 text-sm">"Check if existing auth middleware works here"</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <div class="flex items-center gap-4 mb-6">
+    <div class="w-12 h-12 rounded-full bg-pink-400/20 flex items-center justify-center text-pink-400 font-bold text-xl">3</div>
+    <h2 class="text-3xl font-bold text-pink-400">Define the design</h2>
+  </div>
+  <p class="text-xl opacity-60 mb-6">How should it work? Make architecture decisions explicit.</p>
+  <div class="p-5 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm">
+    <p class="text-pink-400 mb-2">## Design</p>
+    <p class="opacity-70">- Store presets in PostgreSQL (users table FK)</p>
+    <p class="opacity-70">- REST endpoints: GET/POST/DELETE /api/presets</p>
+    <p class="opacity-70">- Share via encoded query param, not separate table</p>
+    <p class="opacity-70">- Use existing validation middleware</p>
+  </div>
+  <p class="text-sm opacity-60 mt-4 text-center">Architecture decisions made here save debugging later.</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <div class="flex items-center gap-4 mb-6">
+    <div class="w-12 h-12 rounded-full bg-amber-400/20 flex items-center justify-center text-amber-400 font-bold text-xl">4</div>
+    <h2 class="text-3xl font-bold text-amber-400">Break into tasks</h2>
+  </div>
+  <p class="text-xl opacity-60 mb-6">Decompose into small, independent pieces.</p>
+  <div class="space-y-2">
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-amber-400">☐</span>
+      <span>Create presets database migration</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-amber-400">☐</span>
+      <span>Add preset TypeBox schemas</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-amber-400">☐</span>
+      <span>Implement GET /api/presets endpoint</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-amber-400">☐</span>
+      <span>Implement POST /api/presets endpoint</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-amber-400">☐</span>
+      <span>Add sharing via URL encoding</span>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <div class="flex items-center gap-4 mb-6">
+    <div class="w-12 h-12 rounded-full bg-green-400/20 flex items-center justify-center text-green-400 font-bold text-xl">5</div>
+    <h2 class="text-3xl font-bold text-green-400">Execute one at a time</h2>
+  </div>
+  <p class="text-xl opacity-60 mb-6">Work on each task separately. Review before moving on.</p>
+  <div class="grid grid-cols-3 gap-4 text-center">
+    <div class="p-4 rounded-xl bg-green-400/10 border border-green-400/30">
+      <p class="text-3xl mb-2">🎯</p>
+      <p class="text-green-400 font-semibold">Focus</p>
+      <p class="opacity-60 text-sm">One task per conversation</p>
+    </div>
+    <div class="p-4 rounded-xl bg-green-400/10 border border-green-400/30">
+      <p class="text-3xl mb-2">👀</p>
+      <p class="text-green-400 font-semibold">Review</p>
+      <p class="opacity-60 text-sm">Check output before next task</p>
+    </div>
+    <div class="p-4 rounded-xl bg-green-400/10 border border-green-400/30">
+      <p class="text-3xl mb-2">🔄</p>
+      <p class="text-green-400 font-semibold">Iterate</p>
+      <p class="opacity-60 text-sm">Refine until correct</p>
+    </div>
+  </div>
+  <p class="text-sm opacity-60 mt-6 text-center">Treat agent output like a junior dev PR. Verify, don't trust blindly.</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-red-400">Keep conversations short</h2>
+  <p class="text-xl opacity-60 mb-6">Long context = lost context. The "needle in haystack" problem.</p>
+  <div class="grid grid-cols-3 gap-4 mb-6">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-cyan-400 font-mono text-lg mb-2">/compact</p>
+      <p class="opacity-60 text-sm">Compress conversation history</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-cyan-400 font-mono text-lg mb-2">/summarize</p>
+      <p class="opacity-60 text-sm">Create summary of work done</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-cyan-400 font-mono text-lg mb-2">New chat</p>
+      <p class="opacity-60 text-sm">Fresh start with clean context</p>
+    </div>
+  </div>
+  <div class="p-4 rounded-xl bg-amber-400/10 border border-amber-400/30">
+    <p class="text-amber-400 font-semibold mb-2">⚠️ Lost in the middle</p>
+    <p class="opacity-70 text-sm">LLMs struggle with information buried in long conversations. Important context at the start or middle gets "forgotten". Compact after each phase.</p>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-6 text-cyan-400">The full loop</h2>
+  <div class="flex items-center justify-center gap-2 text-sm mb-4">
+    <div class="px-3 py-2 rounded-lg bg-cyan-400/20 text-cyan-400">Requirements</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-2 rounded-lg bg-purple-400/20 text-purple-400">Plan</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-2 rounded-lg bg-pink-400/20 text-pink-400">Design</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-2 rounded-lg bg-amber-400/20 text-amber-400">Tasks</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-2 rounded-lg bg-green-400/20 text-green-400">Execute</div>
+  </div>
+  <div class="flex items-center justify-center gap-4 text-xs opacity-60 mb-8">
+    <span>compact ↓</span>
+    <span>compact ↓</span>
+    <span>compact ↓</span>
+    <span>compact ↓</span>
+    <span>compact ↓</span>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="font-semibold mb-2">Each phase is a checkpoint</p>
+      <p class="opacity-60 text-sm">Summarize, save decisions, start fresh for next phase</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="font-semibold mb-2">Decisions compound</p>
+      <p class="opacity-60 text-sm">Good requirements → good design → good tasks → good code</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <h2 class="text-3xl font-bold mb-5 text-cyan-400">Pillar 2 Checklist</h2>
+  <div class="grid grid-cols-2 gap-3 text-base">
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Write requirements before coding</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Use /plan mode first</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Document design decisions</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Break work into small tasks</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>One task per conversation</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Review output before next task</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>/compact after each phase</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Start new chat when context grows</span>
+    </div>
+  </div>
+</div>
