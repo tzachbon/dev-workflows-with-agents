@@ -281,6 +281,37 @@ layout: center
 
 ---
 layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-purple-400">Agent Modes</h2>
+  <p class="text-lg opacity-60 mb-6">Different modes for different tasks</p>
+  <div class="flex gap-6 items-start">
+    <img src="/images/agent-modes.png" class="rounded-xl shadow-lg max-h-48" />
+    <div class="grid grid-cols-2 gap-4 flex-1">
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-purple-400 font-semibold mb-1">Agent</p>
+        <p class="opacity-60 text-sm">Full execution. Reads, writes, runs commands.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-cyan-400 font-semibold mb-1">Plan</p>
+        <p class="opacity-60 text-sm">Think and propose. No execution. Use for brainstorming.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-amber-400 font-semibold mb-1">Debug</p>
+        <p class="opacity-60 text-sm">Analyze errors. Focus on fixing issues.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-green-400 font-semibold mb-1">Ask</p>
+        <p class="opacity-60 text-sm">Questions only. No tool access, just answers.</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-sm opacity-50 mt-5 text-center">Start with Plan mode to think, switch to Agent mode to execute.</p>
+</div>
+
+---
+layout: center
 class: text-center
 ---
 
@@ -662,9 +693,9 @@ layout: center
   <h2 class="text-4xl font-bold mb-4 text-cyan-400">Spec-driven development</h2>
   <p class="text-xl opacity-60 mb-8">The solution: structure before execution</p>
   <div class="flex items-center justify-center gap-4 text-lg">
-    <div class="px-4 py-3 rounded-xl bg-cyan-400/20 border border-cyan-400/30 text-cyan-400 font-semibold">Requirements</div>
-    <span class="text-2xl opacity-40">→</span>
     <div class="px-4 py-3 rounded-xl bg-purple-400/20 border border-purple-400/30 text-purple-400 font-semibold">Plan</div>
+    <span class="text-2xl opacity-40">→</span>
+    <div class="px-4 py-3 rounded-xl bg-cyan-400/20 border border-cyan-400/30 text-cyan-400 font-semibold">Requirements</div>
     <span class="text-2xl opacity-40">→</span>
     <div class="px-4 py-3 rounded-xl bg-pink-400/20 border border-pink-400/30 text-pink-400 font-semibold">Design</div>
     <span class="text-2xl opacity-40">→</span>
@@ -672,7 +703,7 @@ layout: center
     <span class="text-2xl opacity-40">→</span>
     <div class="px-4 py-3 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 font-semibold">Execute</div>
   </div>
-  <p class="text-center mt-8 opacity-60">Define what you want before asking the agent to build it.</p>
+  <p class="text-center mt-8 opacity-60">Brainstorm first, then define what you want.</p>
 </div>
 
 ---
@@ -681,10 +712,40 @@ layout: center
 
 <div class="max-w-3xl">
   <div class="flex items-center gap-4 mb-6">
-    <div class="w-12 h-12 rounded-full bg-cyan-400/20 flex items-center justify-center text-cyan-400 font-bold text-xl">1</div>
+    <div class="w-12 h-12 rounded-full bg-purple-400/20 flex items-center justify-center text-purple-400 font-bold text-xl">1</div>
+    <h2 class="text-3xl font-bold text-purple-400">Plan and brainstorm</h2>
+  </div>
+  <p class="text-xl opacity-60 mb-6">Use Plan mode. Think with the agent before executing anything.</p>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-purple-400 font-semibold mb-2">Start in /plan mode</p>
+      <p class="opacity-60 text-sm">Agent analyzes without executing. Proposes approach.</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-purple-400 font-semibold mb-2">Ask clarifying questions</p>
+      <p class="opacity-60 text-sm">"What edge cases should we handle?"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-purple-400 font-semibold mb-2">Iterate on ideas</p>
+      <p class="opacity-60 text-sm">"Actually, let's use Redis instead of DB"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-purple-400 font-semibold mb-2">Validate assumptions</p>
+      <p class="opacity-60 text-sm">"Check if existing auth middleware works here"</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-3xl">
+  <div class="flex items-center gap-4 mb-6">
+    <div class="w-12 h-12 rounded-full bg-cyan-400/20 flex items-center justify-center text-cyan-400 font-bold text-xl">2</div>
     <h2 class="text-3xl font-bold text-cyan-400">Define requirements</h2>
   </div>
-  <p class="text-xl opacity-60 mb-6">What are you trying to achieve? Write it down.</p>
+  <p class="text-xl opacity-60 mb-6">Now that you've planned, write down what you actually need.</p>
   <div class="p-5 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm">
     <p class="text-cyan-400 mb-2">## Requirements</p>
     <p class="opacity-70">- Users can save filter presets</p>
@@ -693,36 +754,6 @@ layout: center
     <p class="opacity-70">- Maximum 50 presets per user</p>
   </div>
   <p class="text-sm opacity-60 mt-4 text-center">Be explicit. The agent will implement exactly what you write.</p>
-</div>
-
----
-layout: center
----
-
-<div class="max-w-3xl">
-  <div class="flex items-center gap-4 mb-6">
-    <div class="w-12 h-12 rounded-full bg-purple-400/20 flex items-center justify-center text-purple-400 font-bold text-xl">2</div>
-    <h2 class="text-3xl font-bold text-purple-400">Plan and iterate</h2>
-  </div>
-  <p class="text-xl opacity-60 mb-6">Think through your approach. Refine your understanding.</p>
-  <div class="grid grid-cols-2 gap-4">
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-purple-400 font-semibold mb-2">Use /plan mode</p>
-      <p class="opacity-60 text-sm">Agent analyzes without executing. Proposes approach.</p>
-    </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-purple-400 font-semibold mb-2">Ask clarifying questions</p>
-      <p class="opacity-60 text-sm">"What edge cases should we handle?"</p>
-    </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-purple-400 font-semibold mb-2">Iterate on the plan</p>
-      <p class="opacity-60 text-sm">"Actually, let's use Redis instead of DB"</p>
-    </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-purple-400 font-semibold mb-2">Validate assumptions</p>
-      <p class="opacity-60 text-sm">"Check if existing auth middleware works here"</p>
-    </div>
-  </div>
 </div>
 
 ---
@@ -813,6 +844,57 @@ layout: center
 layout: center
 ---
 
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-cyan-400">Tools for spec-driven development</h2>
+  <p class="text-lg opacity-60 mb-5">Custom commands and MCPs that enforce the workflow</p>
+  <div class="grid grid-cols-3 gap-4">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2 text-sm">spec-based-claude-code</p>
+      <p class="text-xs opacity-50 mb-2">Custom commands</p>
+      <div class="font-mono text-xs opacity-70 space-y-1">
+        <p><span class="text-purple-400">/spec:new</span> → Create spec</p>
+        <p><span class="text-purple-400">/spec:requirements</span> → WHAT</p>
+        <p><span class="text-purple-400">/spec:design</span> → HOW</p>
+        <p><span class="text-purple-400">/spec:implement</span> → Execute</p>
+      </div>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2 text-sm">spec-workflow</p>
+      <p class="text-xs opacity-50 mb-2">Custom commands</p>
+      <div class="font-mono text-xs opacity-70 space-y-1">
+        <p><span class="text-purple-400">/spec-init</span> → Initialize</p>
+        <p><span class="text-purple-400">/spec-flow</span> → Full workflow</p>
+        <p><span class="text-purple-400">/bug-fix</span> → Structured fixes</p>
+      </div>
+    </div>
+    <div class="p-4 rounded-xl bg-orange-400/10 border border-orange-400/30">
+      <p class="text-orange-400 font-semibold mb-2 text-sm">spec-server (MCP)</p>
+      <p class="text-xs opacity-50 mb-2">pip install spec-server</p>
+      <div class="font-mono text-xs opacity-70 space-y-1">
+        <p>Requirements → Design → Tasks</p>
+        <p>Built-in validation</p>
+        <p>Task tracking</p>
+        <p>File references</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-sm opacity-60 mt-5 text-center">All create structured spec files and enforce phase gates. MCPs integrate directly with your agent.</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="flex flex-col items-center gap-6">
+  <p class="text-lg opacity-50">Now that we have our workflow...</p>
+  <p class="text-5xl font-bold text-amber-400">Patterns for execution</p>
+  <p class="text-xl opacity-60 mt-4">What habits make the difference?</p>
+</div>
+
+---
+layout: center
+---
+
 <div class="max-w-5xl">
   <h2 class="text-3xl font-bold mb-2 text-red-400">Keep conversations short</h2>
   <div class="flex gap-4 items-center mb-4">
@@ -827,6 +909,7 @@ layout: center
       <p class="text-amber-400 font-bold text-xl mb-3">⚠️ Lost in the middle</p>
       <p class="opacity-80 text-lg leading-relaxed">LLMs struggle with information buried in long conversations. Important context at the start or middle gets "forgotten".</p>
       <p class="text-green-400 font-semibold mt-4">→ Compact after each phase</p>
+      <p class="text-green-400 font-semibold">→ Compact after each task</p>
     </div>
   </div>
 </div>
@@ -870,14 +953,16 @@ layout: center
     <span class="opacity-40">→</span>
     <div class="px-3 py-2 rounded-lg bg-amber-400/20 text-amber-400">Tasks</div>
     <span class="opacity-40">→</span>
-    <div class="px-3 py-2 rounded-lg bg-green-400/20 text-green-400">Execute</div>
+    <div class="px-2 py-2 rounded-lg bg-green-400/20 text-green-400 flex items-center gap-1 text-xs">
+      <span>T1</span><span class="opacity-40">→</span><span>T2</span><span class="opacity-40">→</span><span>T3</span>
+    </div>
   </div>
-  <div class="flex items-center justify-center gap-4 text-xs opacity-60 mb-8">
+  <div class="flex items-center justify-center gap-4 text-xs opacity-60 mb-6">
     <span>compact ↓</span>
     <span>compact ↓</span>
     <span>compact ↓</span>
     <span>compact ↓</span>
-    <span>compact ↓</span>
+    <span class="text-green-400">compact after each ↓</span>
   </div>
   <div class="grid grid-cols-2 gap-4">
     <div class="p-4 rounded-xl bg-white/5 border border-white/10">
