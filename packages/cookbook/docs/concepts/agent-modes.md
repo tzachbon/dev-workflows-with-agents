@@ -2,7 +2,7 @@
 
 Different modes for different tasks. Choose the right mode based on what you're trying to accomplish.
 
-![Agent Modes Overview](/agent-modes.png)
+![Agent Modes Overview](/images/agent-modes.png)
 
 ## Available Modes
 
