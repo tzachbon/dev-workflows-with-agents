@@ -1,6 +1,7 @@
 # Dev Workflow with Agents
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Cookbook](https://img.shields.io/badge/Cookbook-Live-green.svg)](https://tzachbon.github.io/dev-workflow-with-agents/)
 
 A workshop that teaches developers how to work with AI coding agents in a structured, repeatable way.
 

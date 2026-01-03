@@ -3,6 +3,7 @@ import { defineConfig } from 'rspress/config';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
+  base: process.env.GITHUB_ACTIONS ? '/dev-workflow-with-agents/' : '/',
   title: 'AI Workflow Cookbook',
   description: 'A practical reference for working with AI agents',
   icon: '/icon.svg',
