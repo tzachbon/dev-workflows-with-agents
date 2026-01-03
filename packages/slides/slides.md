@@ -16,6 +16,13 @@ mdc: true
   <p class="text-xl opacity-60 mt-6">A structured approach to working with AI agents</p>
 </div>
 
+<!--
+- Welcome everyone
+- This workshop: working with AI agents in a structured, repeatable way
+- Assumption: you know LLMs, agents, tools
+- Focus today: HOW to integrate them into your daily workflow
+-->
+
 ---
 layout: center
 ---
@@ -31,6 +38,13 @@ layout: center
   </div>
 </div>
 
+<!--
+- Ask: Who has felt this frustration?
+- AI is capable, but vague prompts → vague results
+- We end up babysitting, correcting, re-explaining
+- Problem is not AI capability, it's how we communicate
+-->
+
 ---
 layout: center
 class: text-center
@@ -41,6 +55,12 @@ class: text-center
   <p class="text-5xl font-light leading-relaxed text-purple-400">It's how we use it."</p>
   <p class="mt-10 text-xl opacity-50">— @me </p>
 </div>
+
+<!--
+- Core insight of the workshop
+- AI is not bad at coding, we are bad at using it
+- Rest of the presentation: how to fix that
+-->
 
 ---
 layout: center
@@ -54,6 +74,13 @@ class: text-center
     <p>the workflow work</p>
   </div>
 </div>
+
+<!--
+- Two parts to making this work
+- First: prepare your codebase so the agent can thrive
+- Second: adopt a structured workflow when executing tasks
+- Both are equally important
+-->
 
 ---
 layout: center
@@ -71,6 +98,13 @@ layout: center
     <p class="text-sm opacity-50 mt-4">The actual workflow</p>
   </div>
 </div>
+
+<!--
+- Pillar 1: preparation (do it once, agent reuses forever)
+- Pillar 2: execution (spec-driven development, iterative approach)
+- We'll cover both in detail
+- First: some vocabulary
+-->
 
 ---
 layout: center
@@ -103,6 +137,13 @@ layout: center
   </div>
 </div>
 
+<!--
+- Database analogy: without indexes, every query scans the full table
+- Rule files = indexes for your repo
+- Agent finds context fast
+- Prepare once, agent benefits on every task
+-->
+
 ---
 layout: center
 class: text-center
@@ -112,6 +153,13 @@ class: text-center
   <p class="text-2xl opacity-50">But first</p>
   <p class="text-5xl font-bold">Let's get the vocabulary right</p>
 </div>
+
+<!--
+- Before diving into pillars, we need shared vocabulary
+- Terms: rules, commands, skills
+- Different vendors use different names
+- Let's align on definitions
+-->
 
 ---
 layout: center
@@ -139,6 +187,13 @@ layout: center
   </div>
 </div>
 
+<!--
+- Three levels of rules
+- User rules: personal style, applies everywhere
+- Workspace rules: project level, shared with team
+- Subrules: scoped to directories, per-service context
+-->
+
 ---
 layout: center
 ---
@@ -160,6 +215,13 @@ layout: center
 <ProTip position="top-right">
   Write one <code>AGENTS.md</code> and symlink the rest. Update once, all vendors stay in sync.
 </ProTip>
+
+<!--
+- Steering files direct the agent
+- They are the "main" rule file
+- Pro tip: write AGENTS.md, symlink to .cursorrules and CLAUDE.md
+- One source of truth, all vendors stay in sync
+-->
 
 ---
 layout: center
@@ -184,6 +246,14 @@ layout: center
     <p class="opacity-60">Manually edit OpenAPI specs — source of truth is Fastify route schemas</p>
   </div>
 </div>
+
+<!--
+- Real example from production
+- Structure: project context, commands, code style, structure, never section
+- Focus on the WHY, not the HOW
+- Agent can figure out implementation
+- "Never" section: things tooling cannot enforce
+-->
 
 ---
 layout: center
@@ -212,6 +282,14 @@ layout: center
     </div>
   </div>
 </div>
+
+<!--
+- Commands are explicit triggers
+- Native ones: from the vendor
+- Custom commands: anything you repeat, make it a command
+- Examples: clean feature flags, generate docs, cleanup dead code
+- Think of patterns you do often
+-->
 
 ---
 layout: center
@@ -243,6 +321,14 @@ layout: center
   </div>
   <p class="text-sm opacity-50 text-center">Agent working on CI? It loads the CI skill. Working on API? Different skill.</p>
 </div>
+
+<!--
+- Key difference: Rules = static, Skills = dynamic
+- Rules: always loaded based on path/pattern
+- Skills: agent invokes when it detects relevance
+- Skills can include multiple files: scripts, docs, templates
+- Advanced, experimental: start with rules, add skills later
+-->
 
 ---
 layout: center
@@ -279,6 +365,14 @@ layout: center
   </div>
 </div>
 
+<!--
+- MCPs connect your agent to external services
+- Examples: Jira, Notion, Slack, databases
+- Power: agent can fetch context from your actual tools
+- Warning: each MCP consumes context (too many = bloated)
+- We'll cover managing this in Pillar 2
+-->
+
 ---
 layout: center
 ---
@@ -310,6 +404,15 @@ layout: center
   <p class="text-sm opacity-50 mt-5 text-center">Start with Plan mode to think, switch to Agent mode to execute.</p>
 </div>
 
+<!--
+- Different modes for different purposes
+- Agent: full execution, reads/writes/runs commands
+- Plan: think and propose, no execution (great for brainstorming)
+- Debug: focused on fixing issues
+- Ask: questions only, no tools
+- Key pattern: Plan first, then Agent to execute
+-->
+
 ---
 layout: center
 class: text-center
@@ -320,6 +423,12 @@ class: text-center
   <p class="text-5xl font-bold text-cyan-400">Prepare Your Repo</p>
   <p class="text-xl opacity-60 mt-4">Index your codebase for the agent</p>
 </div>
+
+<!--
+- Now we dive into Pillar 1: preparation
+- Making your codebase agent-friendly
+- Do this work once, agent benefits on every task
+-->
 
 ---
 layout: center
@@ -336,6 +445,13 @@ layout: center
     <p class="opacity-80">With indexes → agent finds context instantly, accurate responses</p>
   </div>
 </div>
+
+<!--
+- Mental model: you are indexing your repo
+- Without indexes: every query scans the full codebase
+- With indexes: agent knows exactly where to look
+- Invest time once, get returns on every future task
+-->
 
 ---
 layout: center
@@ -376,6 +492,13 @@ Focus on the <strong>why</strong>, not the <strong>how</strong>. The agent can f
   </div>
 </div>
 
+<!--
+- Six categories of content for rule files
+- Focus on things tooling cannot enforce
+- External links: agent becomes a portal to all your docs
+- Pro tip: focus on the WHY, not the HOW
+-->
+
 ---
 layout: center
 ---
@@ -405,6 +528,14 @@ layout: center
   </div>
 </div>
 
+<!--
+- Don't write "never use console.log" in your rule file
+- Set up ESLint to catch it
+- Agent sees the error, learns the rule
+- Works across ecosystems: Swift, Kotlin, Python, Go
+- Let tooling be the enforcer, rule files are for guidance
+-->
+
 ---
 layout: center
 ---
@@ -423,6 +554,14 @@ layout: center
   </div>
   <p class="text-sm opacity-60 mt-3 text-center">Agent picks up the nearest rule file. More specific = more relevant.</p>
 </div>
+
+<!--
+- Rule files at every level of your monorepo
+- Root AGENTS.md: overall standards, shared patterns
+- Service-level: specific context, links, tools
+- Agent picks up the nearest one
+- More specific = more relevant
+-->
 
 ---
 layout: center
@@ -448,6 +587,14 @@ layout: center
     <p class="opacity-60">• Auth: <span class="text-green-400">@adsk/auth-middleware</span></p>
   </div>
 </div>
+
+<!--
+- Double-click into a service-level rule file
+- Links: design review, API spec, Figma (agent can reference)
+- Context: what this service does
+- Tools: which packages to use for validation, database, auth
+- Gives the agent everything it needs for this specific service
+-->
 
 ---
 layout: center
@@ -475,6 +622,14 @@ layout: center
     </div>
   </div>
 </div>
+
+<!--
+- Rule files are not the only thing
+- Code structure: clear naming, avoid metaprogramming
+- Type hints: dramatically improve comprehension
+- Tests: executable documentation
+- Entry points: how to build, run, test
+-->
 
 ---
 layout: center
@@ -505,6 +660,13 @@ layout: center
   <p class="text-sm opacity-60 mt-4 text-center">Same applies to Swift protocols, Kotlin data classes, Go structs</p>
 </div>
 
+<!--
+- Types are documentation for the agent
+- Left: vague function, agent has to guess
+- Right: clear types, agent knows exactly what to do
+- Applies to all typed languages: TypeScript, Swift, Kotlin, Go
+-->
+
 ---
 layout: center
 ---
@@ -523,6 +685,13 @@ layout: center
   </div>
   <p class="text-lg opacity-80 mt-4 text-center">"Make this test pass" → unambiguous goal</p>
 </div>
+
+<!--
+- Tests are the clearest prompt you can give
+- Instead of describing what you want, write a failing test
+- "Make this test pass" is unambiguous
+- Test defines the contract, agent implements it
+-->
 
 ---
 layout: center
@@ -551,6 +720,13 @@ layout: center
   </div>
   <p class="text-sm opacity-50 mt-4 text-center">Start with 3-5 commands. Add more as patterns emerge.</p>
 </div>
+
+<!--
+- Look at your chat history: what do you ask repeatedly?
+- Four categories: repetitive tasks, code review, scaffolding, cleanup
+- Start with 3-5 commands, add more as patterns emerge
+- If you do it more than twice, make it a command
+-->
 
 ---
 layout: center
@@ -581,6 +757,13 @@ layout: center
     <p class="opacity-70 text-sm">You don't need a skill for every task. Create one when you notice a <strong>recurring pattern</strong> that requires multiple steps, scripts, or external docs. The agent will invoke it when relevant.</p>
   </div>
 </div>
+
+<!--
+- Skills are for recurring patterns, not every task
+- Good examples: onboarding, deployment, debugging CI
+- Key insight: agent invokes skills dynamically when it detects relevance
+- Start simple, add skills as patterns emerge
+-->
 
 ---
 layout: center
@@ -628,6 +811,14 @@ layout: center
   </div>
 </div>
 
+<!--
+- Takeaway checklist for Pillar 1
+- Start with basics: root AGENTS.md, linting, types
+- Add module-level rule files as your repo grows
+- MCPs are optional but powerful
+- Don't try to do everything at once, iterate
+-->
+
 ---
 layout: center
 class: text-center
@@ -638,6 +829,12 @@ class: text-center
   <p class="text-5xl font-bold text-pink-400">Work With Your Agent</p>
   <p class="text-xl opacity-60 mt-4">The execution workflow</p>
 </div>
+
+<!--
+- Now we move to Pillar 2: the actual workflow
+- Pillar 1 was about preparation, Pillar 2 is about execution
+- This is spec-driven development: plan, then execute
+-->
 
 ---
 layout: center
@@ -662,6 +859,13 @@ layout: center
   </div>
 </div>
 
+<!--
+- The cake image: my wife asked me to slice a piece of cake
+- I sliced it vertically, she meant horizontally
+- Same with AI: vague prompts → literal, wrong interpretations
+- The LLM doesn't have your mental model
+-->
+
 ---
 layout: center
 ---
@@ -685,6 +889,14 @@ layout: center
   </div>
 </div>
 
+<!--
+- Context is everything
+- Agent only knows what you show it
+- Common assumptions that fail: it knows the codebase, remembers last chat
+- What works: attach relevant files, explicit context, specific intent
+- This is why spec-driven development matters
+-->
+
 ---
 layout: center
 ---
@@ -705,6 +917,13 @@ layout: center
   </div>
   <p class="text-center mt-8 opacity-60">Brainstorm first, then define what you want.</p>
 </div>
+
+<!--
+- Core of spec-driven development
+- Five phases: Plan, Requirements, Design, Tasks, Execute
+- Brainstorm first with Plan mode, then define what you want
+- Structure before execution, always
+-->
 
 ---
 layout: center
@@ -736,79 +955,167 @@ layout: center
   </div>
 </div>
 
+<!--
+- Step 1: Plan and brainstorm
+- Use Plan mode, agent thinks without executing
+- Ask clarifying questions, iterate on ideas, validate assumptions
+- This is cheap, execution is expensive
+- Think first
+-->
+
 ---
 layout: center
 ---
 
-<div class="max-w-3xl">
-  <div class="flex items-center gap-4 mb-6">
+<div class="max-w-4xl">
+  <div class="flex items-center gap-4 mb-5">
     <div class="w-12 h-12 rounded-full bg-cyan-400/20 flex items-center justify-center text-cyan-400 font-bold text-xl">2</div>
     <h2 class="text-3xl font-bold text-cyan-400">Define requirements</h2>
   </div>
-  <p class="text-xl opacity-60 mb-6">Now that you've planned, write down what you actually need.</p>
-  <div class="p-5 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm">
-    <p class="text-cyan-400 mb-2">## Requirements</p>
-    <p class="opacity-70">- Users can save filter presets</p>
-    <p class="opacity-70">- Presets persist across sessions</p>
-    <p class="opacity-70">- Presets can be shared via URL</p>
-    <p class="opacity-70">- Maximum 50 presets per user</p>
+  <p class="text-lg opacity-60 mb-4">Use structured formats. The agent implements exactly what you write.</p>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-xs">
+      <p class="text-cyan-400 mb-2">## EARS Format</p>
+      <p class="opacity-70 mb-1"><span class="text-purple-400">WHEN</span> [trigger] <span class="text-purple-400">THEN</span> system <span class="text-purple-400">SHALL</span> [behavior]</p>
+      <p class="opacity-50 text-xs mt-2 mb-1">Example:</p>
+      <p class="opacity-70">- <span class="text-cyan-400">FR-001</span>: WHEN user submits form THEN system SHALL validate</p>
+      <p class="opacity-70">- <span class="text-cyan-400">FR-002</span>: WHEN validation fails THEN system SHALL show error</p>
+    </div>
+    <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-xs">
+      <p class="text-cyan-400 mb-2">## User Story + Acceptance</p>
+      <p class="opacity-70 mb-1"><span class="text-amber-400">[P1]</span> Save filter presets</p>
+      <p class="opacity-50 text-xs mt-2 mb-1">Acceptance:</p>
+      <p class="opacity-70">- <span class="text-green-400">Given</span> no presets, <span class="text-green-400">When</span> user saves, <span class="text-green-400">Then</span> preset appears</p>
+      <p class="opacity-70">- <span class="text-cyan-400">SC-001</span>: Max 50 presets per user</p>
+    </div>
   </div>
-  <p class="text-sm opacity-60 mt-4 text-center">Be explicit. The agent will implement exactly what you write.</p>
+  <p class="text-xs opacity-50 mt-3 text-center">FR = Functional Requirement · SC = Success Criteria · P1/P2/P3 = Priority</p>
 </div>
+
+<!--
+- Step 2: Define requirements
+- Use structured formats: EARS, user stories, acceptance criteria
+- Requirements are the WHAT, be specific
+- Agent implements exactly what you write
+-->
 
 ---
 layout: center
 ---
 
-<div class="max-w-3xl">
-  <div class="flex items-center gap-4 mb-6">
+<div class="max-w-5xl">
+  <div class="flex items-center gap-4 mb-4">
     <div class="w-12 h-12 rounded-full bg-pink-400/20 flex items-center justify-center text-pink-400 font-bold text-xl">3</div>
     <h2 class="text-3xl font-bold text-pink-400">Define the design</h2>
+    <span class="px-3 py-1 rounded bg-pink-400/20 text-pink-400 text-sm ml-auto">HOW it works</span>
   </div>
-  <p class="text-xl opacity-60 mb-6">How should it work? Make architecture decisions explicit.</p>
-  <div class="p-5 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm">
-    <p class="text-pink-400 mb-2">## Design</p>
-    <p class="opacity-70">- Store presets in PostgreSQL (users table FK)</p>
-    <p class="opacity-70">- REST endpoints: GET/POST/DELETE /api/presets</p>
-    <p class="opacity-70">- Share via encoded query param, not separate table</p>
-    <p class="opacity-70">- Use existing validation middleware</p>
+  <p class="text-lg opacity-60 mb-5">Architecture decisions, data structures, flows, and interfaces.</p>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10">
+      <p class="text-pink-400 text-sm font-semibold mb-3">📊 Diagrams (Mermaid)</p>
+      <div class="text-sm font-mono opacity-80 space-y-1">
+        <p>• <span class="text-cyan-400">sequenceDiagram</span> → API flows</p>
+        <p>• <span class="text-cyan-400">erDiagram</span> → DB schema</p>
+        <p>• <span class="text-cyan-400">flowchart</span> → Logic paths</p>
+        <p>• <span class="text-cyan-400">classDiagram</span> → OOP structure</p>
+      </div>
+    </div>
+    <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10">
+      <p class="text-pink-400 text-sm font-semibold mb-3">🗃️ Data Structures</p>
+      <div class="text-sm font-mono opacity-80 space-y-1">
+        <p class="text-amber-400">interface Preset {</p>
+        <p class="ml-3">id: number</p>
+        <p class="ml-3">userId: number</p>
+        <p class="ml-3">filters: FilterData</p>
+        <p class="text-amber-400">}</p>
+      </div>
+    </div>
+    <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10">
+      <p class="text-pink-400 text-sm font-semibold mb-3">🔌 API Contracts</p>
+      <div class="text-sm font-mono opacity-80 space-y-1">
+        <p><span class="text-green-400">POST</span> /api/presets → 201: { id, name }</p>
+        <p><span class="text-cyan-400">GET</span> /api/presets → 200: Preset[]</p>
+        <p><span class="text-red-400">DELETE</span> /api/presets/:id → 204</p>
+      </div>
+    </div>
+    <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10">
+      <p class="text-pink-400 text-sm font-semibold mb-3">⚖️ Decisions + Rationale</p>
+      <div class="text-sm opacity-80 space-y-1">
+        <p><span class="text-white">PostgreSQL</span> <span class="opacity-50">- already in stack, JSONB support</span></p>
+        <p><span class="text-white">REST</span> <span class="opacity-50">- simpler, fits CRUD pattern</span></p>
+      </div>
+    </div>
   </div>
-  <p class="text-sm opacity-60 mt-4 text-center">Architecture decisions made here save debugging later.</p>
 </div>
+
+<!--
+- Step 3: Define the design
+- Design is the HOW: diagrams, data structures, APIs, decisions
+- Use Mermaid for diagrams: sequence, ERD, flowchart
+- Document decisions with rationale
+- Agent can reference this later
+-->
 
 ---
 layout: center
 ---
 
-<div class="max-w-3xl">
-  <div class="flex items-center gap-4 mb-6">
-    <div class="w-12 h-12 rounded-full bg-amber-400/20 flex items-center justify-center text-amber-400 font-bold text-xl">4</div>
-    <h2 class="text-3xl font-bold text-amber-400">Break into tasks</h2>
+<div class="max-w-5xl flex gap-6">
+  <div class="flex-[2]">
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-12 h-12 rounded-full bg-amber-400/20 flex items-center justify-center text-amber-400 font-bold text-xl">4</div>
+      <h2 class="text-3xl font-bold text-amber-400">Break into tasks</h2>
+    </div>
+    <p class="text-lg opacity-60 mb-4">Atomic units with full context</p>
+    <div class="grid grid-cols-2 gap-3">
+      <div class="p-3 rounded-xl bg-amber-400/10 border border-amber-400/30">
+        <p class="text-amber-400 font-semibold mb-1">🎯 Atomic chunks</p>
+        <p class="opacity-60 text-sm">One clear goal per task</p>
+      </div>
+      <div class="p-3 rounded-xl bg-purple-400/10 border border-purple-400/30">
+        <p class="text-purple-400 font-semibold mb-1">⚡ Parallel markers</p>
+        <p class="opacity-60 text-sm"><code>[P]</code> for tasks that can run together</p>
+      </div>
+      <div class="p-3 rounded-xl bg-cyan-400/10 border border-cyan-400/30">
+        <p class="text-cyan-400 font-semibold mb-1">📋 Subtasks</p>
+        <p class="opacity-60 text-sm">Break complex tasks into steps</p>
+      </div>
+      <div class="p-3 rounded-xl bg-pink-400/10 border border-pink-400/30">
+        <p class="text-pink-400 font-semibold mb-1">🔗 Linked context</p>
+        <p class="opacity-60 text-sm">Reference FR-*, design decisions</p>
+      </div>
+    </div>
   </div>
-  <p class="text-xl opacity-60 mb-6">Decompose into small, independent pieces.</p>
-  <div class="space-y-2">
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
-      <span class="text-amber-400">☐</span>
-      <span>Create presets database migration</span>
-    </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
-      <span class="text-amber-400">☐</span>
-      <span>Add preset TypeBox schemas</span>
-    </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
-      <span class="text-amber-400">☐</span>
-      <span>Implement GET /api/presets endpoint</span>
-    </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
-      <span class="text-amber-400">☐</span>
-      <span>Implement POST /api/presets endpoint</span>
-    </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
-      <span class="text-amber-400">☐</span>
-      <span>Add sharing via URL encoding</span>
+  <div class="flex-1 p-4 rounded-xl bg-[#0d0d1a] border border-amber-400/30 font-mono text-xs self-start">
+    <p class="text-amber-400 font-bold mb-3">📄 tasks.md</p>
+    <div class="space-y-3 opacity-80">
+      <div>
+        <p class="text-amber-400">## T001: DB Migration</p>
+        <p class="text-white/50">Context: <span class="text-cyan-400">FR-001</span>, <span class="text-pink-400">PostgreSQL</span></p>
+        <p class="text-white/50">Goal: Create presets table</p>
+      </div>
+      <div>
+        <p class="text-amber-400">## T002: Schemas</p>
+        <p class="text-white/50">Context: <span class="text-pink-400">Data Structures</span></p>
+        <p class="text-white/50">Goal: Define Preset types</p>
+      </div>
+      <div>
+        <p class="text-amber-400">## T003 <span class="text-purple-400">[P]</span>: GET endpoint</p>
+        <p class="text-white/50">Context: <span class="text-cyan-400">FR-001</span>, <span class="text-pink-400">API</span></p>
+        <p class="text-white/50">Goal: GET /api/presets</p>
+      </div>
     </div>
   </div>
 </div>
+
+<!--
+- Step 4: Break into tasks
+- One file, many tasks
+- Each task has context, goal, linked requirements
+- Mark parallel tasks with [P]
+- Break complex tasks into subtasks
+- Agent knows the full context from the links
+-->
 
 ---
 layout: center
@@ -840,46 +1147,61 @@ layout: center
   <p class="text-sm opacity-60 mt-6 text-center">Treat agent output like a junior dev PR. Verify, don't trust blindly.</p>
 </div>
 
+<!--
+- Step 5: Execute one at a time
+- One task per conversation
+- Review before moving on
+- Treat agent output like a junior dev PR
+- Verify, don't trust blindly
+- Compact after each task to keep context fresh
+-->
+
 ---
 layout: center
 ---
 
 <div class="max-w-4xl">
   <h2 class="text-3xl font-bold mb-4 text-cyan-400">Tools for spec-driven development</h2>
-  <p class="text-lg opacity-60 mb-5">Custom commands and MCPs that enforce the workflow</p>
-  <div class="grid grid-cols-3 gap-4">
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-2 text-sm">spec-based-claude-code</p>
-      <p class="text-xs opacity-50 mb-2">Custom commands</p>
+  <p class="text-lg opacity-60 mb-4">The workflow generates structured files at each phase</p>
+  <div class="flex items-center justify-center gap-2 text-xs mb-4">
+    <div class="px-3 py-1 rounded bg-cyan-400/20 text-cyan-400 font-mono">spec.md</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-1 rounded bg-pink-400/20 text-pink-400 font-mono">design.md</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-1 rounded bg-amber-400/20 text-amber-400 font-mono">tasks.md</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-1 rounded bg-green-400/20 text-green-400 font-mono">implement</div>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-purple-400/10 border border-purple-400/30">
+      <p class="text-purple-400 font-semibold mb-2 text-sm">GitHub Spec Kit</p>
+      <p class="text-xs opacity-50 mb-2">specify init my-project --ai claude</p>
       <div class="font-mono text-xs opacity-70 space-y-1">
-        <p><span class="text-purple-400">/spec:new</span> → Create spec</p>
-        <p><span class="text-purple-400">/spec:requirements</span> → WHAT</p>
-        <p><span class="text-purple-400">/spec:design</span> → HOW</p>
-        <p><span class="text-purple-400">/spec:implement</span> → Execute</p>
+        <p><span class="text-purple-400">/speckit.specify</span> → spec.md (EARS, stories)</p>
+        <p><span class="text-purple-400">/speckit.plan</span> → design.md + data-model.md</p>
+        <p><span class="text-purple-400">/speckit.tasks</span> → tasks.md (phases, markers)</p>
+        <p><span class="text-purple-400">/speckit.implement</span> → execute with TDD</p>
       </div>
     </div>
     <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-2 text-sm">spec-workflow</p>
-      <p class="text-xs opacity-50 mb-2">Custom commands</p>
-      <div class="font-mono text-xs opacity-70 space-y-1">
-        <p><span class="text-purple-400">/spec-init</span> → Initialize</p>
-        <p><span class="text-purple-400">/spec-flow</span> → Full workflow</p>
-        <p><span class="text-purple-400">/bug-fix</span> → Structured fixes</p>
-      </div>
-    </div>
-    <div class="p-4 rounded-xl bg-orange-400/10 border border-orange-400/30">
-      <p class="text-orange-400 font-semibold mb-2 text-sm">spec-server (MCP)</p>
-      <p class="text-xs opacity-50 mb-2">pip install spec-server</p>
-      <div class="font-mono text-xs opacity-70 space-y-1">
-        <p>Requirements → Design → Tasks</p>
-        <p>Built-in validation</p>
-        <p>Task tracking</p>
-        <p>File references</p>
+      <p class="text-cyan-400 font-semibold mb-2 text-sm">Key patterns from tooling</p>
+      <div class="text-xs opacity-70 space-y-1">
+        <p>• <span class="text-green-400">EARS format</span> for requirements</p>
+        <p>• <span class="text-green-400">Given/When/Then</span> acceptance criteria</p>
+        <p>• <span class="text-green-400">[Story: US1]</span> links for traceability</p>
+        <p>• <span class="text-green-400">[P]</span> markers for parallel tasks</p>
+        <p>• <span class="text-green-400">Checkpoints</span> after each user story</p>
       </div>
     </div>
   </div>
-  <p class="text-sm opacity-60 mt-5 text-center">All create structured spec files and enforce phase gates. MCPs integrate directly with your agent.</p>
 </div>
+
+<!--
+- Tools that help with spec-driven development
+- GitHub Spec Kit provides custom commands for the full workflow
+- Key patterns: EARS format, Given/When/Then, linked stories, parallel markers
+- Adopt these patterns manually or use the tooling
+-->
 
 ---
 layout: center
@@ -888,8 +1210,14 @@ layout: center
 <div class="flex flex-col items-center gap-6">
   <p class="text-lg opacity-50">Now that we have our workflow...</p>
   <p class="text-5xl font-bold text-amber-400">Patterns for execution</p>
-  <p class="text-xl opacity-60 mt-4">What habits make the difference?</p>
+  <p class="text-xl opacity-60 mt-4">Fresh Chat Protocol: new session for each major phase</p>
 </div>
+
+<!--
+- Segue: now let's talk about execution patterns
+- Fresh Chat Protocol: new session for each major phase
+- These are the habits that make the workflow work
+-->
 
 ---
 layout: center
@@ -910,9 +1238,18 @@ layout: center
       <p class="opacity-80 text-lg leading-relaxed">LLMs struggle with information buried in long conversations. Important context at the start or middle gets "forgotten".</p>
       <p class="text-green-400 font-semibold mt-4">→ Compact after each phase</p>
       <p class="text-green-400 font-semibold">→ Compact after each task</p>
+      <p class="text-cyan-400 text-sm mt-3 opacity-80">Large specs? Use document sharding: break into indexed sections.</p>
     </div>
   </div>
 </div>
+
+<!--
+- Critical: keep conversations short
+- LLMs struggle with info buried in long conversations ("lost in the middle")
+- Use /compact after each phase AND after each task
+- Start new chats for major phases
+- Context degrades over time
+-->
 
 ---
 layout: center
@@ -937,6 +1274,14 @@ layout: center
     </div>
   </div>
 </div>
+
+<!--
+- Warning about MCPs: more tools = less context for your work
+- Each MCP adds tool definitions to context
+- 10 MCPs can eat thousands of tokens
+- Be selective, enable only what you need for the current task
+- Disable MCPs when not in use
+-->
 
 ---
 layout: center
@@ -976,48 +1321,124 @@ layout: center
   </div>
 </div>
 
+<!--
+- Full loop visualized
+- Each phase has a checkpoint
+- Compact and summarize before moving on
+- Notice: compact after each task, not just after each phase
+- Decisions compound: good requirements → good code
+-->
+
 ---
 layout: center
 ---
 
-<div class="max-w-3xl">
+<div class="max-w-3xl text-center flex flex-col gap-6">
+  <p class="text-5xl font-bold">
+    Not all tasks require <span class="text-amber-400">spec-ing</span>,
+  </p>
+  <p class="text-5xl font-bold">
+    but all tasks require <span class="text-cyan-400">planning</span>.
+  </p>
+  <p class="mt-8 opacity-60 text-xl">Simple bug fix? Plan first, execute. Complex feature? Full spec workflow.</p>
+</div>
+
+<!--
+- Important disclaimer
+- Not every task needs the full spec workflow
+- Simple bug fix? Just plan and execute
+- Complex feature? Full workflow with requirements, design, tasks
+- But ALL tasks require planning
+- Think before you act
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-2xl text-center">
+  <p class="text-4xl font-light italic leading-relaxed opacity-90">
+    "Measure twice, cut once."
+  </p>
+  <p class="mt-8 text-lg opacity-60">— A wise man told me that</p>
+</div>
+
+<!--
+- Old wisdom applies to AI
+- Measure twice, cut once
+- Planning is measuring, execution is cutting
+- Invest in planning, save on rework
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
   <h2 class="text-3xl font-bold mb-5 text-cyan-400">Pillar 2 Checklist</h2>
-  <div class="grid grid-cols-2 gap-3 text-base">
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+  <div class="grid grid-cols-2 gap-2 text-sm">
+    <div class="flex items-center gap-3 p-2 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>Write requirements before coding</span>
+      <span>Use EARS format for requirements (FR-001, SC-001)</span>
     </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+    <div class="flex items-center gap-3 p-2 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>Use /plan mode first</span>
+      <span>Write Given/When/Then acceptance criteria</span>
     </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+    <div class="flex items-center gap-3 p-2 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>Document design decisions</span>
+      <span>Document design decisions with rationale</span>
     </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+    <div class="flex items-center gap-3 p-2 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>Break work into small tasks</span>
+      <span>Add [Story: US1] links to tasks for traceability</span>
     </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+    <div class="flex items-center gap-3 p-2 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Mark parallel tasks with [P]</span>
+    </div>
+    <div class="flex items-center gap-3 p-2 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Add checkpoints after each user story</span>
+    </div>
+    <div class="flex items-center gap-3 p-2 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
       <span>One task per conversation</span>
     </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+    <div class="flex items-center gap-3 p-2 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>Review output before next task</span>
+      <span>/compact after each phase and task</span>
     </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+    <div class="flex items-center gap-3 p-2 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>/compact after each phase</span>
+      <span>Fresh chat for each major phase</span>
     </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
-      <span class="text-cyan-400">☐</span>
-      <span>Start new chat when context grows</span>
-    </div>
-    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+    <div class="flex items-center gap-3 p-2 rounded-lg bg-white/5">
       <span class="text-orange-400">☐</span>
       <span>Disable unused MCPs to save context</span>
     </div>
   </div>
 </div>
+
+<!--
+- Takeaway checklist for Pillar 2
+- Start with basics: EARS format, acceptance criteria, one task per conversation
+- Build up to checkpoints and fresh chats as you get comfortable
+- MCP management is important: disable what you don't need
+-->
+
+---
+layout: center
+---
+
+<div class="text-center">
+  <p class="text-6xl font-bold mb-8">Thank you!</p>
+  <p class="text-2xl opacity-60">Questions?</p>
+</div>
+
+<!--
+- Thank you for attending
+- Now it's time for the hands-on session
+- Refer to the cookbook for reference
+- Questions?
+-->
