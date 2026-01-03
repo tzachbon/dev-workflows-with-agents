@@ -1,0 +1,27 @@
+[
+  {
+    "text": "Concepts",
+    "link": "/concepts/",
+    "activeMatch": "/concepts/"
+  },
+  {
+    "text": "Prepare Your Repo",
+    "link": "/pillar-1/",
+    "activeMatch": "/pillar-1/"
+  },
+  {
+    "text": "Work With Your Agent",
+    "link": "/pillar-2/",
+    "activeMatch": "/pillar-2/"
+  },
+  {
+    "text": "Examples",
+    "link": "/examples/",
+    "activeMatch": "/examples/"
+  },
+  {
+    "text": "Quick Reference",
+    "link": "/quick-reference/",
+    "activeMatch": "/quick-reference/"
+  }
+]
