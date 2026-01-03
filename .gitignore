@@ -142,3 +142,9 @@ vite.config.ts.timestamp-*
 
 
 .playwright-mcp
+
+# Internal npm registry config (not for open source)
+.npmrc
+
+# Build artifacts
+doc_build/
