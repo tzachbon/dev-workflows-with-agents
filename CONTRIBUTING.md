@@ -41,8 +41,8 @@ If you find a bug or have a suggestion:
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/dev-workflow-with-agents.git
-cd dev-workflow-with-agents
+git clone https://github.com/YOUR_USERNAME/dev-workflows-with-agents.git
+cd dev-workflows-with-agents
 
 # Install dependencies
 npm install
@@ -77,7 +77,7 @@ npm run format
 ## Project Structure
 
 ```
-dev-workflow-with-agents/
+dev-workflows-with-agents/
 ├── packages/
 │   ├── slides/          # Slidev presentation
 │   └── cookbook/        # RSPress documentation

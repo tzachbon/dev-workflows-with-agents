@@ -1,7 +1,7 @@
 # Dev Workflow with Agents
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Cookbook](https://img.shields.io/badge/Cookbook-Live-green.svg)](https://tzachbon.github.io/dev-workflow-with-agents/)
+[![Cookbook](https://img.shields.io/badge/Cookbook-Live-green.svg)](https://tzachbon.github.io/dev-workflows-with-agents/)
 
 A workshop that teaches developers how to work with AI coding agents in a structured, repeatable way.
 
@@ -53,8 +53,8 @@ Follow a structured workflow when executing tasks:
 
 ```bash
 # Clone the repository
-git clone https://github.com/tzachbon/dev-workflow-with-agents.git
-cd dev-workflow-with-agents
+git clone https://github.com/tzachbon/dev-workflows-with-agents.git
+cd dev-workflows-with-agents
 
 # Install dependencies
 npm install
