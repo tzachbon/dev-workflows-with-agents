@@ -165,6 +165,10 @@ layout: center
 layout: center
 ---
 
+<ProTip position="top-right">
+Focus on the <strong>why</strong>, not the <strong>how</strong>. The agent can figure out implementation details.
+</ProTip>
+
 <div class="max-w-4xl">
   <div class="flex items-center gap-3 mb-4">
     <div class="px-3 py-1 rounded-md bg-cyan-400/20 text-cyan-400 font-mono text-sm">AGENTS.md</div>
@@ -206,7 +210,7 @@ layout: center
       <div class="space-y-2 font-mono text-base">
         <p><span class="text-pink-400">/clean-flags</span> — Remove feature flags</p>
         <p><span class="text-pink-400">/gen-docs</span> — Generate documentation</p>
-        <p><span class="text-pink-400">/cleanup</span> — Clean up comments</p>
+        <p><span class="text-pink-400">/file-cleanup</span> — Remove TODOs and dead code</p>
       </div>
       <p class="opacity-50 text-xs mt-3">Anything you repeat → make it a command</p>
     </div>
@@ -217,25 +221,31 @@ layout: center
 layout: center
 ---
 
-<div class="max-w-3xl">
+<div class="max-w-4xl">
   <div class="flex items-center gap-3 mb-4">
     <h2 class="text-3xl font-bold text-green-400">Skills</h2>
     <span class="px-2 py-1 rounded bg-green-400/20 text-green-400 text-xs font-semibold">Advanced</span>
     <span class="px-2 py-1 rounded bg-yellow-400/20 text-yellow-400 text-xs font-semibold">Experimental</span>
   </div>
-  <p class="text-xl mb-6">Modular capabilities that package instructions, scripts, and resources for specialized tasks.</p>
-  <div class="p-5 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm mb-6">
-    <p class="opacity-50 text-xs mb-2">skills/generate-report/</p>
-    <p class="opacity-70">├── SKILL.md <span class="text-white/40">← instructions + when to use</span></p>
-    <p class="opacity-70">├── template.xlsx</p>
-    <p class="opacity-70">├── format-data.py</p>
-    <p class="opacity-70">└── brand-guidelines.md</p>
+  <div class="grid grid-cols-2 gap-6 mb-5">
+    <div class="p-4 rounded-xl bg-cyan-400/10 border border-cyan-400/30">
+      <p class="text-cyan-400 font-semibold mb-2">Rules</p>
+      <p class="opacity-70 text-sm"><strong>Static</strong> — added to context automatically</p>
+      <p class="opacity-50 text-xs mt-2">Always loaded, or triggered by path/pattern</p>
+    </div>
+    <div class="p-4 rounded-xl bg-green-400/10 border border-green-400/30">
+      <p class="text-green-400 font-semibold mb-2">Skills</p>
+      <p class="opacity-70 text-sm"><strong>Dynamic</strong> — agent invokes when needed</p>
+      <p class="opacity-50 text-xs mt-2">LLM detects relevance and loads on demand</p>
+    </div>
   </div>
-  <div class="space-y-3 text-lg">
-    <p class="opacity-70">• Agent decides when to load based on task relevance</p>
-    <p class="opacity-70">• Can include executable scripts and templates</p>
-    <p class="opacity-70">• Encapsulates organizational knowledge and procedures</p>
+  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm mb-4">
+    <p class="opacity-50 text-xs mb-2">skills/debug-ci/</p>
+    <p class="opacity-70">├── SKILL.md <span class="text-white/40">← when to use + instructions</span></p>
+    <p class="opacity-70">├── check-logs.sh</p>
+    <p class="opacity-70">└── common-failures.md</p>
   </div>
+  <p class="text-sm opacity-50 text-center">Agent working on CI? It loads the CI skill. Working on API? Different skill.</p>
 </div>
 
 ---
@@ -377,16 +387,149 @@ layout: center
 layout: center
 ---
 
-<div class="max-w-3xl">
-  <h2 class="text-3xl font-bold mb-6 text-cyan-400">Pillar 1 Checklist</h2>
-  <div class="space-y-3 text-lg">
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-cyan-400">Beyond rule files</h2>
+  <p class="text-lg opacity-60 mb-6">More ways to make your repo agent-friendly</p>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">🏗️ Code structure</p>
+      <p class="opacity-60 text-sm">Clear naming, flat hierarchies, avoid metaprogramming</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">📝 Type hints</p>
+      <p class="opacity-60 text-sm">Types dramatically improve agent comprehension</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">🧪 Executable tests</p>
+      <p class="opacity-60 text-sm">"Make this test pass" is the clearest prompt</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">🚀 Entry points</p>
+      <p class="opacity-60 text-sm">Document how to build, run, test</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-cyan-400">Types help agents</h2>
+  <div class="grid grid-cols-2 gap-6">
+    <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30">
+      <p class="text-red-400 font-semibold mb-3">❌ Hard to understand</p>
+      <div class="font-mono text-sm opacity-80">
+        <p>function process(data, opts) {</p>
+        <p class="ml-4">const result = transform(data)</p>
+        <p class="ml-4">return result</p>
+        <p>}</p>
+      </div>
+    </div>
+    <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/30">
+      <p class="text-green-400 font-semibold mb-3">✓ Clear intent</p>
+      <div class="font-mono text-sm opacity-80">
+        <p>function process(</p>
+        <p class="ml-4">data: <span class="text-cyan-400">UserInput</span>,</p>
+        <p class="ml-4">opts: <span class="text-cyan-400">ProcessOptions</span></p>
+        <p>): <span class="text-cyan-400">ProcessResult</span> {</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-sm opacity-60 mt-4 text-center">Same applies to Swift protocols, Kotlin data classes, Go structs</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-cyan-400">Tests as executable specs</h2>
+  <div class="p-5 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm">
+    <p class="text-green-400 mb-2">// Instead of describing what you want...</p>
+    <p class="opacity-60 mb-4">"Add a function that filters users by role and returns sorted by name"</p>
+    <p class="text-green-400 mb-2">// Write a failing test</p>
+    <p class="opacity-80">it('filters users by role', () => {</p>
+    <p class="opacity-80 ml-4">const users = [{ name: 'Alice', role: 'admin' }, { name: 'Bob', role: 'user' }]</p>
+    <p class="opacity-80 ml-4">const result = filterByRole(users, 'admin')</p>
+    <p class="opacity-80 ml-4">expect(result).toEqual([{ name: 'Alice', role: 'admin' }])</p>
+    <p class="opacity-80">})</p>
+  </div>
+  <p class="text-lg opacity-80 mt-4 text-center">"Make this test pass" → unambiguous goal</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-cyan-400">Creating useful commands</h2>
+  <p class="text-lg opacity-60 mb-5">Look at your chat history. What do you ask repeatedly?</p>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">🔄 Repetitive tasks</p>
+      <p class="opacity-60 text-sm">"Clean up feature flags", "Update dependencies", "Generate docs"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">🔍 Code review patterns</p>
+      <p class="opacity-60 text-sm">"Check for security issues", "Audit accessibility", "Find TODO comments"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">🏗️ Scaffolding</p>
+      <p class="opacity-60 text-sm">"Create new service", "Add API endpoint", "Generate test file"</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">🧹 Cleanup</p>
+      <p class="opacity-60 text-sm">"Remove console.logs", "Fix import order", "Update deprecated APIs"</p>
+    </div>
+  </div>
+  <p class="text-sm opacity-50 mt-4 text-center">Start with 3-5 commands. Add more as patterns emerge.</p>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-cyan-400">When to create a skill</h2>
+  <p class="text-lg opacity-60 mb-5">Patterns you use repeatedly, but not every time. Keep them modular.</p>
+  <div class="grid grid-cols-3 gap-4 mb-5">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <span class="text-2xl">📚</span>
+      <p class="text-cyan-400 font-semibold mt-2">Onboarding</p>
+      <p class="opacity-50 text-xs mt-1">Setup, credentials, local dev</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <span class="text-2xl">🚀</span>
+      <p class="text-cyan-400 font-semibold mt-2">Deployment</p>
+      <p class="opacity-50 text-xs mt-1">Deploy, rollback, monitoring</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <span class="text-2xl">🐛</span>
+      <p class="text-cyan-400 font-semibold mt-2">Debug CI</p>
+      <p class="opacity-50 text-xs mt-1">Logs, traces, common fixes</p>
+    </div>
+  </div>
+  <div class="p-4 rounded-xl bg-green-400/10 border border-green-400/30">
+    <p class="text-green-400 font-semibold mb-2">The key insight</p>
+    <p class="opacity-70 text-sm">You don't need a skill for every task. Create one when you notice a <strong>recurring pattern</strong> that requires multiple steps, scripts, or external docs. The agent will invoke it when relevant.</p>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-5 text-cyan-400">Pillar 1 Checklist</h2>
+  <div class="grid grid-cols-2 gap-3 text-base">
     <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
       <span>Root <code class="text-cyan-400">AGENTS.md</code> with project overview</span>
     </div>
     <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>Per-service rule files with links to external docs</span>
+      <span>Per-module rule files with external links</span>
     </div>
     <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
@@ -394,11 +537,23 @@ layout: center
     </div>
     <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>Clear entry points documented</span>
+      <span>Type hints on public interfaces</span>
     </div>
     <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
-      <span>Type hints on public interfaces</span>
+      <span>Entry points documented (build, run, test)</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Tests that serve as executable specs</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Custom commands for repetitive tasks</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-cyan-400">☐</span>
+      <span>Skills for complex procedures (optional)</span>
     </div>
   </div>
 </div>
