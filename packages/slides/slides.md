@@ -284,10 +284,10 @@ layout: center
 class: text-center
 ---
 
-<div class="pillar-card">
-  <div class="pillar-number">1</div>
-  <h2 class="text-4xl font-bold mb-4">Prepare Your Repo</h2>
-  <p class="text-xl opacity-60">Index your codebase for the agent</p>
+<div class="flex flex-col items-center gap-4">
+  <p class="text-lg opacity-50">Pillar 1</p>
+  <p class="text-5xl font-bold text-cyan-400">Prepare Your Repo</p>
+  <p class="text-xl opacity-60 mt-4">Index your codebase for the agent</p>
 </div>
 
 ---
@@ -602,10 +602,10 @@ layout: center
 class: text-center
 ---
 
-<div class="pillar-card">
-  <div class="pillar-number">2</div>
-  <h2 class="text-4xl font-bold mb-4">Work With Your Agent</h2>
-  <p class="text-xl opacity-60">The execution workflow</p>
+<div class="flex flex-col items-center gap-4">
+  <p class="text-lg opacity-50">Pillar 2</p>
+  <p class="text-5xl font-bold text-pink-400">Work With Your Agent</p>
+  <p class="text-xl opacity-60 mt-4">The execution workflow</p>
 </div>
 
 ---
