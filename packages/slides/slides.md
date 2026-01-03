@@ -1432,13 +1432,20 @@ layout: center
 ---
 
 <div class="text-center">
-  <p class="text-6xl font-bold mb-8">Thank you!</p>
-  <p class="text-2xl opacity-60">Questions?</p>
+  <p class="text-6xl font-bold mb-6">Thank you!</p>
+  <p class="text-2xl opacity-60 mb-8">Questions?</p>
+  <div class="flex justify-center items-center gap-8">
+    <img src="/images/qr-link.png" class="w-48 h-48 rounded-xl" />
+    <div class="text-left">
+      <p class="text-lg opacity-80">Scan for the Cookbook</p>
+      <p class="text-sm opacity-50">tzachbon.github.io/dev-workflows-with-agents</p>
+    </div>
+  </div>
 </div>
 
 <!--
 - Thank you for attending
 - Now it's time for the hands-on session
-- Refer to the cookbook for reference
+- Scan the QR code to access the cookbook
 - Questions?
 -->
