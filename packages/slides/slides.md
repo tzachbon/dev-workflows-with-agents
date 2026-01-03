@@ -165,10 +165,6 @@ layout: center
 layout: center
 ---
 
-<ProTip position="top-right">
-Focus on the <strong>why</strong>, not the <strong>how</strong>. The agent can figure out implementation details.
-</ProTip>
-
 <div class="max-w-4xl">
   <div class="flex items-center gap-3 mb-4">
     <div class="px-3 py-1 rounded-md bg-cyan-400/20 text-cyan-400 font-mono text-sm">AGENTS.md</div>
@@ -250,6 +246,41 @@ layout: center
 
 ---
 layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-orange-400">MCPs (Model Context Protocol)</h2>
+  <p class="text-lg opacity-60 mb-6">Connect your agent to external tools and services</p>
+  <div class="grid grid-cols-4 gap-4 mb-6">
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-2xl mb-2">📝</p>
+      <p class="text-orange-400 font-semibold">Notion</p>
+      <p class="opacity-50 text-xs">Docs, wikis</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-2xl mb-2">🎫</p>
+      <p class="text-orange-400 font-semibold">Jira</p>
+      <p class="opacity-50 text-xs">Issues, tickets</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-2xl mb-2">💬</p>
+      <p class="text-orange-400 font-semibold">Slack</p>
+      <p class="opacity-50 text-xs">Messages, channels</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-2xl mb-2">🗄️</p>
+      <p class="text-orange-400 font-semibold">Databases</p>
+      <p class="opacity-50 text-xs">Query, explore</p>
+    </div>
+  </div>
+  <div class="p-4 rounded-xl bg-orange-400/10 border border-orange-400/30">
+    <p class="text-orange-400 font-semibold mb-2">Why MCPs matter</p>
+    <p class="opacity-70 text-sm">Agent can fetch context from your actual tools. No copy-pasting tickets, no manual lookups. It reads Jira, searches Confluence, checks Slack history.</p>
+  </div>
+</div>
+
+---
+layout: center
 class: text-center
 ---
 
@@ -278,6 +309,10 @@ layout: center
 ---
 layout: center
 ---
+
+<ProTip position="top-right">
+Focus on the <strong>why</strong>, not the <strong>how</strong>. The agent can figure out implementation details.
+</ProTip>
 
 <div class="max-w-4xl">
   <h2 class="text-3xl font-bold mb-4 text-cyan-400">What goes in rule files?</h2>
@@ -555,6 +590,10 @@ layout: center
       <span class="text-cyan-400">☐</span>
       <span>Skills for complex procedures (optional)</span>
     </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-orange-400">☐</span>
+      <span>MCPs configured for your tools (Jira, Notion, etc.)</span>
+    </div>
   </div>
 </div>
 
@@ -802,6 +841,28 @@ layout: center
 ---
 
 <div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-orange-400">MCP context bloat</h2>
+  <p class="text-lg opacity-60 mb-6">More tools = less space for your actual work</p>
+  <div class="flex justify-center mb-6">
+    <img src="/images/mcp-context-bloat.jpeg" class="rounded-xl max-h-72 shadow-2xl" />
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30">
+      <p class="text-red-400 font-semibold mb-2">Too many MCPs enabled</p>
+      <p class="opacity-60 text-sm">Each tool definition eats context. 10 MCPs with 50 tools each = thousands of tokens before you even start.</p>
+    </div>
+    <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/30">
+      <p class="text-green-400 font-semibold mb-2">Be selective</p>
+      <p class="opacity-60 text-sm">Enable only what you need for the current task. Disable MCPs when not in use. Consider tool search patterns.</p>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
   <h2 class="text-3xl font-bold mb-6 text-cyan-400">The full loop</h2>
   <div class="flex items-center justify-center gap-2 text-sm mb-4">
     <div class="px-3 py-2 rounded-lg bg-cyan-400/20 text-cyan-400">Requirements</div>
@@ -871,6 +932,10 @@ layout: center
     <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
       <span class="text-cyan-400">☐</span>
       <span>Start new chat when context grows</span>
+    </div>
+    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+      <span class="text-orange-400">☐</span>
+      <span>Disable unused MCPs to save context</span>
     </div>
   </div>
 </div>
