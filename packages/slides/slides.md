@@ -813,26 +813,21 @@ layout: center
 layout: center
 ---
 
-<div class="max-w-4xl">
-  <h2 class="text-3xl font-bold mb-4 text-red-400">Keep conversations short</h2>
-  <p class="text-xl opacity-60 mb-6">Long context = lost context. The "needle in haystack" problem.</p>
-  <div class="grid grid-cols-3 gap-4 mb-6">
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
-      <p class="text-cyan-400 font-mono text-lg mb-2">/compact</p>
-      <p class="opacity-60 text-sm">Compress conversation history</p>
-    </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
-      <p class="text-cyan-400 font-mono text-lg mb-2">/summarize</p>
-      <p class="opacity-60 text-sm">Create summary of work done</p>
-    </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
-      <p class="text-cyan-400 font-mono text-lg mb-2">New chat</p>
-      <p class="opacity-60 text-sm">Fresh start with clean context</p>
-    </div>
+<div class="max-w-5xl">
+  <h2 class="text-3xl font-bold mb-2 text-red-400">Keep conversations short</h2>
+  <div class="flex gap-4 items-center mb-4">
+    <p class="opacity-60">Use:</p>
+    <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-cyan-400 font-mono">/compact</span>
+    <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-cyan-400 font-mono">/summarize</span>
+    <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-cyan-400 font-mono">New chat</span>
   </div>
-  <div class="p-4 rounded-xl bg-amber-400/10 border border-amber-400/30">
-    <p class="text-amber-400 font-semibold mb-2">⚠️ Lost in the middle</p>
-    <p class="opacity-70 text-sm">LLMs struggle with information buried in long conversations. Important context at the start or middle gets "forgotten". Compact after each phase.</p>
+  <div class="flex gap-6 items-center">
+    <img src="/images/lost-in-the-middle.png" class="rounded-xl max-h-80 shadow-2xl" />
+    <div class="flex-1">
+      <p class="text-amber-400 font-bold text-xl mb-3">⚠️ Lost in the middle</p>
+      <p class="opacity-80 text-lg leading-relaxed">LLMs struggle with information buried in long conversations. Important context at the start or middle gets "forgotten".</p>
+      <p class="text-green-400 font-semibold mt-4">→ Compact after each phase</p>
+    </div>
   </div>
 </div>
 
@@ -840,20 +835,22 @@ layout: center
 layout: center
 ---
 
-<div class="max-w-4xl">
-  <h2 class="text-3xl font-bold mb-4 text-orange-400">MCP context bloat</h2>
-  <p class="text-lg opacity-60 mb-6">More tools = less space for your actual work</p>
-  <div class="flex justify-center mb-6">
-    <img src="/images/mcp-context-bloat.jpeg" class="rounded-xl max-h-72 shadow-2xl" />
-  </div>
-  <div class="grid grid-cols-2 gap-4">
-    <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30">
-      <p class="text-red-400 font-semibold mb-2">Too many MCPs enabled</p>
-      <p class="opacity-60 text-sm">Each tool definition eats context. 10 MCPs with 50 tools each = thousands of tokens before you even start.</p>
+<div class="max-w-5xl">
+  <h2 class="text-3xl font-bold mb-3 text-orange-400">MCP context bloat</h2>
+  <p class="text-lg opacity-60 mb-4">More tools = less space for your actual work</p>
+  <div class="grid grid-cols-2 gap-6 items-center">
+    <div class="flex justify-center">
+      <img src="/images/mcp-context-bloat.jpeg" class="rounded-xl max-h-56 shadow-2xl" />
     </div>
-    <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/30">
-      <p class="text-green-400 font-semibold mb-2">Be selective</p>
-      <p class="opacity-60 text-sm">Enable only what you need for the current task. Disable MCPs when not in use. Consider tool search patterns.</p>
+    <div class="space-y-3">
+      <div class="p-3 rounded-xl bg-red-500/10 border border-red-500/30">
+        <p class="text-red-400 font-semibold mb-1 text-sm">Too many MCPs enabled</p>
+        <p class="opacity-60 text-xs">10 MCPs × 50 tools = thousands of tokens gone</p>
+      </div>
+      <div class="p-3 rounded-xl bg-green-500/10 border border-green-500/30">
+        <p class="text-green-400 font-semibold mb-1 text-sm">Be selective</p>
+        <p class="opacity-60 text-xs">Enable only what you need. Disable when not in use.</p>
+      </div>
     </div>
   </div>
 </div>
