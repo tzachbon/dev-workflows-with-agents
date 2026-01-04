@@ -43,6 +43,9 @@ layout: center
 - AI is capable, but vague prompts → vague results
 - We end up babysitting, correcting, re-explaining
 - Problem is not AI capability, it's how we communicate
+- Context: 98% of developers now use AI tools weekly (Greptile 2025)
+- Claude Code CLI alone hit $1B in annual revenue
+- The tools work. We need to learn how to use them.
 -->
 
 ---
@@ -142,6 +145,8 @@ layout: center
 - Rule files = indexes for your repo
 - Agent finds context fast
 - Prepare once, agent benefits on every task
+- Real impact: 76% more code per developer, 33% larger PRs (Greptile 2025)
+- Medium teams (6-15 devs) saw +89% output increase
 -->
 
 ---
@@ -221,6 +226,8 @@ layout: center
 - They are the "main" rule file
 - Pro tip: write AGENTS.md, symlink to .cursorrules and CLAUDE.md
 - One source of truth, all vendors stay in sync
+- Industry adoption: 67% of repos now use CLAUDE.md (Greptile 2025)
+- 17% use all three formats simultaneously
 -->
 
 ---
@@ -411,6 +418,8 @@ layout: center
 - Debug: focused on fixing issues
 - Ask: questions only, no tools
 - Key pattern: Plan first, then Agent to execute
+- Willison's definition: "Agent = LLM that runs tools in a loop to achieve a goal"
+- The two breakout categories: coding agents and search agents
 -->
 
 ---
@@ -961,6 +970,9 @@ layout: center
 - Ask clarifying questions, iterate on ideas, validate assumptions
 - This is cheap, execution is expensive
 - Think first
+- Note: Peter Steinberger argues plan mode is "a hack for older models"
+- With better models, he just starts a conversation and writes "build" when ready
+- For now, plan mode is still valuable for most workflows
 -->
 
 ---
@@ -1154,6 +1166,9 @@ layout: center
 - Treat agent output like a junior dev PR
 - Verify, don't trust blindly
 - Compact after each task to keep context fresh
+- Counterpoint from Steinberger: "I don't read much code anymore. I watch the stream."
+- He trusts the model more with GPT-5, focuses on architecture over line-by-line review
+- Balance: your comfort level will evolve as models improve
 -->
 
 ---
@@ -1249,6 +1264,8 @@ layout: center
 - Use /compact after each phase AND after each task
 - Start new chats for major phases
 - Context degrades over time
+- Steinberger: "I get 5x more done on one codex session than claude" (better context mgmt)
+- His trick: maintain docs/*.md for subsystems, force model to read on certain topics
 -->
 
 ---
