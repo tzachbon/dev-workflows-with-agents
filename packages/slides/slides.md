@@ -910,21 +910,34 @@ layout: center
 layout: center
 ---
 
-<div class="max-w-4xl">
+<div class="max-w-5xl">
   <h2 class="text-4xl font-bold mb-4 text-cyan-400">Spec-driven development</h2>
-  <p class="text-xl opacity-60 mb-8">The solution: structure before execution</p>
-  <div class="flex items-center justify-center gap-4 text-lg">
-    <div class="px-4 py-3 rounded-xl bg-purple-400/20 border border-purple-400/30 text-purple-400 font-semibold">Plan</div>
-    <span class="text-2xl opacity-40">→</span>
-    <div class="px-4 py-3 rounded-xl bg-cyan-400/20 border border-cyan-400/30 text-cyan-400 font-semibold">Requirements</div>
-    <span class="text-2xl opacity-40">→</span>
-    <div class="px-4 py-3 rounded-xl bg-pink-400/20 border border-pink-400/30 text-pink-400 font-semibold">Design</div>
-    <span class="text-2xl opacity-40">→</span>
-    <div class="px-4 py-3 rounded-xl bg-amber-400/20 border border-amber-400/30 text-amber-400 font-semibold">Tasks</div>
-    <span class="text-2xl opacity-40">→</span>
-    <div class="px-4 py-3 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 font-semibold">Execute</div>
+  <p class="text-xl opacity-60 mb-6">The solution: structure before execution</p>
+  <div class="flex items-center justify-center gap-3 text-base mb-6">
+    <div class="px-3 py-2 rounded-xl bg-purple-400/20 border border-purple-400/30 text-purple-400 font-semibold">Plan</div>
+    <span class="text-xl opacity-40">→</span>
+    <div class="px-3 py-2 rounded-xl bg-cyan-400/20 border border-cyan-400/30 text-cyan-400 font-semibold">Requirements</div>
+    <span class="text-xl opacity-40">→</span>
+    <div class="px-3 py-2 rounded-xl bg-pink-400/20 border border-pink-400/30 text-pink-400 font-semibold">Design</div>
+    <span class="text-xl opacity-40">→</span>
+    <div class="px-3 py-2 rounded-xl bg-amber-400/20 border border-amber-400/30 text-amber-400 font-semibold">Tasks</div>
+    <span class="text-xl opacity-40">→</span>
+    <div class="px-3 py-2 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 font-semibold">Execute</div>
   </div>
-  <p class="text-center mt-8 opacity-60">Brainstorm first, then define what you want.</p>
+  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm leading-relaxed">
+    <p class="opacity-70">📁 <span class="text-white">your-project/</span></p>
+    <p class="opacity-70 ml-4">├── 📁 <span class="text-cyan-400 font-semibold">spec/</span></p>
+    <p class="opacity-70 ml-8">│   ├── 📁 <span class="text-amber-400">user-authentication/</span></p>
+    <p class="opacity-70 ml-12">│   │   ├── <span class="text-cyan-400">requirements.md</span></p>
+    <p class="opacity-70 ml-12">│   │   ├── <span class="text-pink-400">design.md</span></p>
+    <p class="opacity-70 ml-12">│   │   └── <span class="text-amber-400">tasks.md</span></p>
+    <p class="opacity-70 ml-8">│   └── 📁 <span class="text-amber-400">preset-filters/</span></p>
+    <p class="opacity-70 ml-12">│       ├── <span class="text-cyan-400">requirements.md</span></p>
+    <p class="opacity-70 ml-12">│       ├── <span class="text-pink-400">design.md</span></p>
+    <p class="opacity-70 ml-12">│       └── <span class="text-amber-400">tasks.md</span></p>
+    <p class="opacity-70 ml-4">└── 📁 src/</p>
+  </div>
+  <p class="text-center mt-4 opacity-50 text-sm">Tooling like <span class="text-cyan-400">speckit</span> and custom commands can generate this structure for you.</p>
 </div>
 
 <!--
@@ -932,6 +945,9 @@ layout: center
 - Five phases: Plan, Requirements, Design, Tasks, Execute
 - Brainstorm first with Plan mode, then define what you want
 - Structure before execution, always
+- Show the folder structure: spec/ with feature directories
+- Each feature has requirements.md, design.md, tasks.md
+- Tooling exists to automate this, you don't write it by hand
 -->
 
 ---
