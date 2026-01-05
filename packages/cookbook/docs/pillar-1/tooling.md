@@ -154,3 +154,4 @@ Things tooling can't enforce:
 - "Don't manually edit OpenAPI specs"
 
 These require context and judgment that linters can't provide.
+

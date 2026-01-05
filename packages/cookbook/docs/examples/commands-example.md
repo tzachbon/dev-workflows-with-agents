@@ -253,3 +253,4 @@ Don't remove:
 4. **Include validation** - How to verify it worked
 
 Start with 3-5 commands. Add more as patterns emerge.
+

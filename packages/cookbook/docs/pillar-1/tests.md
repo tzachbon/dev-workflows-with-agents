@@ -141,3 +141,4 @@ You don't need 100% coverage. You need enough tests that the agent can verify it
 :::tip
 When adding new features, write the test first. Give the failing test to the agent. This is the fastest path to correct implementation.
 :::
+

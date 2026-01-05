@@ -53,3 +53,4 @@ Projects optimized for agent exploration from the start outperform retrofitted o
 4. Document entry points (how to build, run, test)
 
 See the [full checklist](/pillar-1/checklist) for comprehensive setup.
+

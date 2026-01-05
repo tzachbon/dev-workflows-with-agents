@@ -22,3 +22,4 @@ Interview with the creator of Claude Code on what grew his career and building A
 
 ### [Simon Willison on X](https://x.com/simonw)
 Follow for real-time insights on AI development, LLM releases, and practical tips. One of the most active voices in the AI developer community.
+

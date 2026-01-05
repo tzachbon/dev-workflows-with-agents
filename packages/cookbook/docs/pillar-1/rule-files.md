@@ -106,3 +106,4 @@ Each rule file should be 100-200 words. Focus on what's unique to that module. D
 :::tip
 If you find yourself copying the same content to multiple rule files, move it to the root `AGENTS.md` instead.
 :::
+

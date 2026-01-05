@@ -135,3 +135,4 @@ const publishedPosts = posts.filter(post => post.published)
 | Magic strings | No type checking, easy to miss |
 
 Make the implicit explicit. If it matters, write it down.
+

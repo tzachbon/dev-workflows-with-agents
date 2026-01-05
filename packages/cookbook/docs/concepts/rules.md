@@ -60,3 +60,4 @@ Don't write rules that tooling can enforce:
 - "No unused imports" → TypeScript compiler handles it
 
 The agent sees lint errors and learns the rules automatically. Let tooling be the enforcer.
+

@@ -29,3 +29,4 @@ Don't copy verbatim. Use them as starting points.
 4. Iterate as you learn what works
 
 The best AGENTS.md is one you've refined over time based on what actually helps the agent.
+
