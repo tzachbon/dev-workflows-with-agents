@@ -1360,6 +1360,51 @@ layout: center
 layout: center
 ---
 
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-3 text-purple-400">Parallel agent execution</h2>
+  <p class="text-lg opacity-60 mb-5">Run multiple agents on different tasks without blocking</p>
+  <div class="grid grid-cols-3 gap-4 mb-5">
+    <div class="p-4 rounded-xl bg-cyan-400/10 border border-cyan-400/30 text-center">
+      <p class="text-3xl mb-2">👤</p>
+      <p class="text-cyan-400 font-semibold">You</p>
+      <p class="opacity-50 text-sm">main branch</p>
+    </div>
+    <div class="p-4 rounded-xl bg-purple-400/10 border border-purple-400/30 text-center">
+      <p class="text-3xl mb-2">🤖</p>
+      <p class="text-purple-400 font-semibold">Agent 1</p>
+      <p class="opacity-50 text-sm">feature-auth</p>
+    </div>
+    <div class="p-4 rounded-xl bg-pink-400/10 border border-pink-400/30 text-center">
+      <p class="text-3xl mb-2">🤖</p>
+      <p class="text-pink-400 font-semibold">Agent 2</p>
+      <p class="opacity-50 text-sm">feature-filters</p>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-green-400/10 border border-green-400/30">
+      <p class="text-green-400 font-semibold mb-2">Cursor Background Agents</p>
+      <p class="opacity-60 text-sm">Built-in. Kick off a task, agent works in isolated worktree, opens PR when done.</p>
+    </div>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-cyan-400 font-semibold mb-2">Claude Code (manual)</p>
+      <p class="opacity-60 text-sm font-mono text-xs">git worktree add ../feat feature-branch</p>
+      <p class="opacity-50 text-xs mt-1">Then open that directory in Claude Code</p>
+    </div>
+  </div>
+</div>
+
+<!--
+- Parallel execution: multiple agents on different features simultaneously
+- Uses git worktree under the hood (isolated directories, same repo)
+- Cursor: Background Agents do this automatically
+- Claude Code: manual worktree setup required
+- Benefit: work on multiple features without blocking, review PRs as they come in
+-->
+
+---
+layout: center
+---
+
 <div class="max-w-3xl text-center flex flex-col gap-6">
   <p class="text-5xl font-bold">
     Not all tasks require <span class="text-amber-400">spec-ing</span>,
