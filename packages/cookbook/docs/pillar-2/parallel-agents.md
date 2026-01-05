@@ -63,4 +63,3 @@ git worktree remove ../worktrees/my-feature
 ## Further Reading
 
 - [Git Worktree Documentation](https://git-scm.com/docs/git-worktree)
-

@@ -1360,35 +1360,38 @@ layout: center
 layout: center
 ---
 
-<div class="max-w-4xl">
+<div class="max-w-5xl">
   <h2 class="text-3xl font-bold mb-3 text-purple-400">Parallel agent execution</h2>
-  <p class="text-lg opacity-60 mb-5">Run multiple agents on different tasks without blocking</p>
-  <div class="grid grid-cols-3 gap-4 mb-5">
-    <div class="p-4 rounded-xl bg-cyan-400/10 border border-cyan-400/30 text-center">
-      <p class="text-3xl mb-2">👤</p>
-      <p class="text-cyan-400 font-semibold">You</p>
-      <p class="opacity-50 text-sm">main branch</p>
+  <p class="text-lg opacity-60 mb-4">Run multiple agents on different tasks without blocking</p>
+  <div class="flex gap-6 items-start">
+    <div class="flex-1">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="flex items-center gap-2 p-2 rounded-lg bg-cyan-400/10 border border-cyan-400/30">
+          <span class="text-xl">👤</span>
+          <span class="text-cyan-400 text-sm">You (main)</span>
+        </div>
+        <span class="opacity-40">→</span>
+        <div class="flex items-center gap-2 p-2 rounded-lg bg-purple-400/10 border border-purple-400/30">
+          <span class="text-xl">🤖</span>
+          <span class="text-purple-400 text-sm">Agent (feature-a)</span>
+        </div>
+        <span class="opacity-40">→</span>
+        <span class="text-green-400 text-sm">PR</span>
+      </div>
+      <div class="space-y-3">
+        <div class="p-3 rounded-xl bg-green-400/10 border border-green-400/30">
+          <p class="text-green-400 font-semibold mb-1 text-sm">Cursor: Select "Worktree" mode</p>
+          <p class="opacity-60 text-xs">Agent works in isolated directory, opens PR when done</p>
+        </div>
+        <div class="p-3 rounded-xl bg-white/5 border border-white/10">
+          <p class="text-cyan-400 font-semibold mb-1 text-sm">Claude Code (manual)</p>
+          <p class="opacity-60 text-xs font-mono">git worktree add ../feat branch</p>
+        </div>
+      </div>
     </div>
-    <div class="p-4 rounded-xl bg-purple-400/10 border border-purple-400/30 text-center">
-      <p class="text-3xl mb-2">🤖</p>
-      <p class="text-purple-400 font-semibold">Agent 1</p>
-      <p class="opacity-50 text-sm">feature-auth</p>
-    </div>
-    <div class="p-4 rounded-xl bg-pink-400/10 border border-pink-400/30 text-center">
-      <p class="text-3xl mb-2">🤖</p>
-      <p class="text-pink-400 font-semibold">Agent 2</p>
-      <p class="opacity-50 text-sm">feature-filters</p>
-    </div>
-  </div>
-  <div class="grid grid-cols-2 gap-4">
-    <div class="p-4 rounded-xl bg-green-400/10 border border-green-400/30">
-      <p class="text-green-400 font-semibold mb-2">Cursor Background Agents</p>
-      <p class="opacity-60 text-sm">Built-in. Kick off a task, agent works in isolated worktree, opens PR when done.</p>
-    </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-      <p class="text-cyan-400 font-semibold mb-2">Claude Code (manual)</p>
-      <p class="opacity-60 text-sm font-mono text-xs">git worktree add ../feat feature-branch</p>
-      <p class="opacity-50 text-xs mt-1">Then open that directory in Claude Code</p>
+    <div class="flex flex-col items-center">
+      <img src="/images/worktree.png" class="rounded-xl shadow-2xl max-h-48" />
+      <p class="text-xs opacity-50 mt-2">Cursor worktree selector</p>
     </div>
   </div>
 </div>
