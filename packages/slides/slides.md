@@ -924,18 +924,12 @@ layout: center
     <span class="text-xl opacity-40">→</span>
     <div class="px-3 py-2 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 font-semibold">Execute</div>
   </div>
-  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm leading-relaxed">
-    <p class="opacity-70">📁 <span class="text-white">your-project/</span></p>
-    <p class="opacity-70 ml-4">├── 📁 <span class="text-cyan-400 font-semibold">spec/</span></p>
-    <p class="opacity-70 ml-8">│   ├── 📁 <span class="text-amber-400">user-authentication/</span></p>
-    <p class="opacity-70 ml-12">│   │   ├── <span class="text-cyan-400">requirements.md</span></p>
-    <p class="opacity-70 ml-12">│   │   ├── <span class="text-pink-400">design.md</span></p>
-    <p class="opacity-70 ml-12">│   │   └── <span class="text-amber-400">tasks.md</span></p>
-    <p class="opacity-70 ml-8">│   └── 📁 <span class="text-amber-400">preset-filters/</span></p>
-    <p class="opacity-70 ml-12">│       ├── <span class="text-cyan-400">requirements.md</span></p>
-    <p class="opacity-70 ml-12">│       ├── <span class="text-pink-400">design.md</span></p>
-    <p class="opacity-70 ml-12">│       └── <span class="text-amber-400">tasks.md</span></p>
-    <p class="opacity-70 ml-4">└── 📁 src/</p>
+  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm leading-tight">
+    <p class="opacity-70">📁 your-project/</p>
+    <p class="opacity-70">├── 📁 <span class="text-cyan-400 font-semibold">spec/</span></p>
+    <p class="opacity-70">│   ├── 📁 <span class="text-amber-400">user-authentication/</span> → <span class="text-white/40">requirements.md, design.md, tasks.md</span></p>
+    <p class="opacity-70">│   └── 📁 <span class="text-amber-400">preset-filters/</span> → <span class="text-white/40">requirements.md, design.md, tasks.md</span></p>
+    <p class="opacity-70">└── 📁 src/</p>
   </div>
   <p class="text-center mt-4 opacity-50 text-sm">Tooling like <span class="text-cyan-400">speckit</span> and custom commands can generate this structure for you.</p>
 </div>
