@@ -31,7 +31,7 @@ Examples:
 
 ## Creating Custom Commands
 
-In Cursor, custom commands live in `.cursor/rules/` with a specific format.
+In Cursor, custom commands live in `.cursor/commands/` with a specific format.
 
 Example command file:
 
