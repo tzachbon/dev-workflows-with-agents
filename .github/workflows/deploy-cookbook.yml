@@ -1,4 +1,4 @@
-name: Deploy Cookbook to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'packages/cookbook/**'
+      - 'packages/slides/**'
       - '.github/workflows/deploy-cookbook.yml'
   workflow_dispatch:
 
@@ -30,12 +31,19 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install all dependencies
         run: npm install
 
       - name: Build cookbook
         run: npm run build
         working-directory: packages/cookbook
+
+      - name: Build slides
+        run: npx slidev build --base /dev-workflows-with-agents/slides/
+        working-directory: packages/slides
+
+      - name: Copy slides into cookbook output
+        run: cp -r packages/slides/dist packages/cookbook/doc_build/slides
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

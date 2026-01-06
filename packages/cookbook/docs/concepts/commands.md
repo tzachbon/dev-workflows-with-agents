@@ -79,4 +79,3 @@ Look at your chat history. What do you ask repeatedly?
 :::tip
 Start with 3-5 commands. Add more as patterns emerge. If you do it more than twice, make it a command.
 :::
-

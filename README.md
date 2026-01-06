@@ -2,6 +2,7 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Cookbook](https://img.shields.io/badge/Cookbook-Live-green.svg)](https://tzachbon.github.io/dev-workflows-with-agents/)
+[![Slides](https://img.shields.io/badge/Slides-Live-purple.svg)](https://tzachbon.github.io/dev-workflows-with-agents/slides/)
 
 A workshop that teaches developers how to work with AI coding agents in a structured, repeatable way.
 

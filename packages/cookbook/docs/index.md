@@ -10,8 +10,8 @@ hero:
       text: Get Started
       link: /concepts/
     - theme: alt
-      text: Quick Reference
-      link: /quick-reference/cheatsheet
+      text: View Slides
+      link: /slides/
 features:
   - title: Core Concepts
     details: Understand the vocabulary - rules, steering files, commands, skills, MCPs, and agent modes.
