@@ -1,28 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Redirecting...</title>
     <script>
       // SPA redirect for GitHub Pages
       // Based on https://github.com/rafgraph/spa-github-pages
-      (function() {
+      (function () {
         const base = '/dev-workflows-with-agents';
         const slidesBase = base + '/slides';
         const path = window.location.pathname;
-        
+
         // Handle slides SPA routing - redirect with path in query string
         if (path.startsWith(slidesBase) && path !== slidesBase + '/') {
           const route = path.slice(slidesBase.length);
           const search = window.location.search;
           const hash = window.location.hash;
           // Encode path as query param for index.html to decode
-          window.location.replace(
-            slidesBase + '/?p=' + encodeURIComponent(route + search + hash)
-          );
+          window.location.replace(slidesBase + '/?p=' + encodeURIComponent(route + search + hash));
           return;
         }
-        
+
         // For other 404s, redirect to cookbook homepage
         window.location.replace(base + '/');
       })();
@@ -32,4 +30,3 @@
     <p>Redirecting...</p>
   </body>
 </html>
-

@@ -38,6 +38,9 @@ jobs:
         run: npm run build
         working-directory: packages/cookbook
 
+      - name: Replace 404 with SPA redirect
+        run: cp packages/cookbook/docs/public/404.html packages/cookbook/doc_build/404.html
+
       - name: Build slides
         run: npx slidev build --base /dev-workflows-with-agents/slides/
         working-directory: packages/slides
