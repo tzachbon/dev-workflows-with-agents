@@ -751,6 +751,96 @@ layout: center
 ---
 
 <div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-green-400">Fail fast with agents</h2>
+  <p class="text-lg opacity-60 mb-5">Validate assumptions before refining. POC first, polish later.</p>
+  <div class="grid grid-cols-2 gap-6 mb-5">
+    <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30">
+      <p class="text-red-400 font-semibold mb-2">Slow failure</p>
+      <p class="opacity-60 text-sm">Perfect requirements → detailed design → implement everything → discover it doesn't work</p>
+      <p class="opacity-50 text-xs mt-2">Wasted effort on wrong assumptions.</p>
+    </div>
+    <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/30">
+      <p class="text-green-400 font-semibold mb-2">Fast failure</p>
+      <p class="opacity-60 text-sm">POC first → does it work? → yes: refine, test, polish → no: pivot early</p>
+      <p class="opacity-50 text-xs mt-2">Validate before investing.</p>
+    </div>
+  </div>
+  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 mb-4">
+    <p class="text-green-400 font-semibold mb-2">Structure tasks for fast feedback</p>
+    <div class="flex items-center gap-3 text-sm">
+      <div class="px-3 py-1 rounded bg-green-400/20 text-green-400">1. POC</div>
+      <span class="opacity-40">→</span>
+      <div class="px-3 py-1 rounded bg-cyan-400/20 text-cyan-400">2. Validate</div>
+      <span class="opacity-40">→</span>
+      <div class="px-3 py-1 rounded bg-purple-400/20 text-purple-400">3. Refine</div>
+      <span class="opacity-40">→</span>
+      <div class="px-3 py-1 rounded bg-amber-400/20 text-amber-400">4. Test</div>
+      <span class="opacity-40">→</span>
+      <div class="px-3 py-1 rounded bg-pink-400/20 text-pink-400">5. Polish</div>
+    </div>
+  </div>
+  <p class="text-center text-lg opacity-80">Like a coding interview: <span class="text-green-400 font-semibold">make it work first</span>, even brute force. Optimize later.</p>
+</div>
+
+<!--
+- Fail fast is about TASK STRUCTURE, not just tests
+- POC-first mindset: create something that works to validate your idea
+- Only THEN do you refine, refactor, add tests, polish
+- With autonomous agents this matters even more: agent can iterate fast
+- Don't spend hours on perfect plans for ideas that won't work
+- Structure tasks: POC → Validate → Refine → Test → Polish
+- Like a job interview: don't optimize day 1, make it work first (even brute force), then optimize
+- Requirements/design are valuable, but working code proves the assumption
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-green-400">Tests as feedback loops</h2>
+  <p class="text-lg opacity-60 mb-5">More tests = faster agent iteration. No human in the loop.</p>
+  <div class="flex items-center justify-center gap-3 mb-6">
+    <div class="px-3 py-2 rounded-lg bg-red-400/20 text-red-400 text-sm">Write code</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-2 rounded-lg bg-amber-400/20 text-amber-400 text-sm">Run tests</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-2 rounded-lg bg-red-400/20 text-red-400 text-sm">Fail</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-2 rounded-lg bg-cyan-400/20 text-cyan-400 text-sm">Read error</div>
+    <span class="opacity-40">→</span>
+    <div class="px-3 py-2 rounded-lg bg-green-400/20 text-green-400 text-sm">Fix</div>
+    <span class="opacity-40">→</span>
+    <span class="text-sm opacity-50">repeat</span>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30">
+      <p class="text-red-400 font-semibold mb-2">Without tests</p>
+      <p class="opacity-60 text-sm">Agent writes code → waits for you → you find bugs → back and forth</p>
+      <p class="opacity-50 text-xs mt-2">Slow. You're the bottleneck.</p>
+    </div>
+    <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/30">
+      <p class="text-green-400 font-semibold mb-2">With tests</p>
+      <p class="opacity-60 text-sm">Agent writes code → tests fail → agent reads error → fixes → repeats</p>
+      <p class="opacity-50 text-xs mt-2">Fast. Agent iterates autonomously.</p>
+    </div>
+  </div>
+  <p class="text-center mt-5 opacity-70">Tests remove you from the feedback loop. Agent self-corrects.</p>
+</div>
+
+<!--
+- Tests let the agent iterate WITHOUT waiting for human feedback
+- The agent becomes its own reviewer via test results
+- More tests = more feedback = faster convergence to working code
+- You're not the bottleneck anymore
+- This is why test coverage matters for AI workflows
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
   <h2 class="text-3xl font-bold mb-4 text-cyan-400">Creating useful commands</h2>
   <p class="text-lg opacity-60 mb-5">Look at your chat history. What do you ask repeatedly?</p>
   <div class="grid grid-cols-2 gap-4">
