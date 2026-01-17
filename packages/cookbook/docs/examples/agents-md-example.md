@@ -175,4 +175,3 @@ console.log(user)                           // Don't use console
 4. **Keep it updated** - AGENTS.md should evolve with your codebase
 
 The best AGENTS.md is specific, concise, and maintained.
-

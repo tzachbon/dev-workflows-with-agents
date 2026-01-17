@@ -66,4 +66,3 @@ If you're starting from zero:
 6. **Ongoing:** Add tests that serve as specs
 
 Don't try to do everything at once. Each improvement compounds.
-

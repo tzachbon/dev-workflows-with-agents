@@ -140,4 +140,3 @@ If a requirement is obvious, skip it. Focus on things that could be misunderstoo
 :::tip
 Requirements are a conversation tool. Write them, share with the agent, refine based on questions. They're not a contract.
 :::
-

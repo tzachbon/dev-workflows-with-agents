@@ -123,4 +123,3 @@ ln -s AGENTS.md CLAUDE.md
 ```
 
 Update `AGENTS.md` once, all vendors stay in sync.
-

@@ -109,4 +109,3 @@ REST API for user-saved search filters. Uses Postgres.
 ```
 
 The agent can now reference your design docs, understand the tech stack, and use the right packages.
-

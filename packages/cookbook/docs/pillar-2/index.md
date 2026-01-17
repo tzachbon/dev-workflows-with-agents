@@ -68,4 +68,3 @@ Complex feature? Full workflow with requirements, design, tasks.
 5. Compact before moving to the next task
 
 See the [full checklist](/pillar-2/checklist) for the complete workflow.
-

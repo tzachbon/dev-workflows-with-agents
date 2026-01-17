@@ -146,4 +146,3 @@ The agent should be able to:
 3. Execute commands without guessing
 
 No hunting through README files, no guessing at command syntax.
-

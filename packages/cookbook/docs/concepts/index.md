@@ -29,4 +29,3 @@ The agent only knows what you show it. Everything else is guessing.
 When AI searches for context on its own, it burns tokens and often grabs more than needed. When you provide context explicitly, you do it precisely.
 
 This principle applies to everything in this cookbook. Every configuration, every file structure decision, every agent setup serves one purpose: giving the AI the right context efficiently.
-

@@ -82,4 +82,3 @@ Create a notepad for:
 - Domain-specific knowledge
 
 The agent won't automatically invoke notepads. You attach them manually when relevant.
-

@@ -200,4 +200,3 @@ Match the design effort to the complexity.
 :::tip
 The agent can help generate design docs. Start with requirements, ask the agent to propose a design, then refine together.
 :::
-

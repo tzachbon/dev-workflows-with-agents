@@ -113,4 +113,3 @@ Once the plan is solid:
 :::tip
 If the plan reveals the task is bigger than expected, break it into multiple sessions. Each session should be focused on one coherent piece of work.
 :::
-
