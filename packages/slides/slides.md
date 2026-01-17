@@ -424,6 +424,50 @@ layout: center
 
 ---
 layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-teal-400">Sub-agents</h2>
+  <p class="text-lg opacity-60 mb-6">Delegate tasks to agents with isolated context</p>
+  <div class="grid grid-cols-2 gap-6 mb-6">
+    <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30">
+      <p class="text-red-400 font-semibold mb-2">The problem</p>
+      <p class="opacity-60 text-sm">Context accumulates. Conversations grow. Agent loses focus.</p>
+    </div>
+    <div class="p-4 rounded-xl bg-teal-400/10 border border-teal-400/30">
+      <p class="text-teal-400 font-semibold mb-2">The solution</p>
+      <p class="opacity-60 text-sm">Spawn a sub-agent with fresh context. Get only the output back.</p>
+    </div>
+  </div>
+  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 text-center">
+    <div class="flex items-center justify-center gap-4 text-sm">
+      <div class="px-3 py-2 rounded-lg bg-purple-400/20 text-purple-400">Root Agent</div>
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-xs opacity-50">task + instructions</span>
+        <span class="opacity-40">→</span>
+      </div>
+      <div class="px-3 py-2 rounded-lg bg-teal-400/20 text-teal-400">Sub-agent</div>
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-xs opacity-50">output only</span>
+        <span class="opacity-40">→</span>
+      </div>
+      <div class="px-3 py-2 rounded-lg bg-purple-400/20 text-purple-400">Root Agent</div>
+    </div>
+  </div>
+  <p class="text-sm opacity-50 mt-4 text-center">Instructions flow down. Only outputs flow back up.</p>
+</div>
+
+<!--
+- Sub-agents: delegation pattern for complex tasks
+- Problem: context bloat in long conversations
+- Solution: spawn sub-agent with isolated context
+- Key insight: root agent never sees sub-agent's working memory, just the result
+- Use for: distinct subtasks, different specializations, crowded context
+- Claude Code: background agents. Cursor: agent mode can spawn sub-tasks.
+-->
+
+---
+layout: center
 class: text-center
 ---
 

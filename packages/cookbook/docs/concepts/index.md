@@ -23,6 +23,7 @@ The agent only knows what you show it. Everything else is guessing.
 | [Skills](/concepts/skills) | Dynamic context the agent invokes when needed |
 | [MCPs](/concepts/mcps) | Model Context Protocol - connect to external tools |
 | [Agent Modes](/concepts/agent-modes) | Different modes for different tasks (Agent, Plan, Debug, Ask) |
+| [Sub-agents](/concepts/sub-agents) | Delegate tasks to agents with isolated context |
 
 ## Why This Matters
 
