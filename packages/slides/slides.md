@@ -342,8 +342,92 @@ layout: center
 ---
 
 <div class="max-w-4xl">
-  <h2 class="text-3xl font-bold mb-4 text-orange-400">MCPs (Model Context Protocol)</h2>
-  <p class="text-lg opacity-60 mb-6">Connect your agent to external tools and services</p>
+  <h2 class="text-3xl font-bold mb-4 text-orange-400">MCP: How AI Connects to the World</h2>
+  <p class="text-lg opacity-60 mb-5">Model Context Protocol - the bridge between AI and external tools</p>
+  <div class="grid grid-cols-2 gap-6 mb-5">
+    <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30">
+      <p class="text-red-400 font-semibold mb-2">Without MCP</p>
+      <p class="opacity-60 text-sm">AI responds based on training data only. No live data, no API calls, no file access.</p>
+    </div>
+    <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/30">
+      <p class="text-green-400 font-semibold mb-2">With MCP</p>
+      <p class="opacity-60 text-sm">AI can fetch live data, call APIs, read files, query databases. Real-time context.</p>
+    </div>
+  </div>
+  <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm text-center">
+    <div class="flex items-center justify-center gap-4">
+      <div class="px-4 py-2 rounded-lg bg-purple-400/20 text-purple-400">Cursor</div>
+      <div class="flex flex-col items-center">
+        <span class="text-xs opacity-50">MCP</span>
+        <span class="text-orange-400">◄─────►</span>
+      </div>
+      <div class="px-4 py-2 rounded-lg bg-orange-400/20 text-orange-400">MCP Server</div>
+      <div class="flex flex-col items-center">
+        <span class="text-xs opacity-50">HTTP</span>
+        <span class="text-cyan-400">◄─────►</span>
+      </div>
+      <div class="px-4 py-2 rounded-lg bg-cyan-400/20 text-cyan-400">External APIs</div>
+    </div>
+    <p class="text-xs opacity-50 mt-3">Client (your IDE) ↔ Server (your code) ↔ External services</p>
+  </div>
+</div>
+
+<!--
+- MCP is an open standard for AI-to-tool communication
+- Without MCP: AI is limited to training data
+- With MCP: AI can interact with live systems
+- Architecture: Client (Cursor) ↔ MCP Server (your code) ↔ External APIs
+- You write the server, it exposes tools the AI can call
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-orange-400">MCP Tools</h2>
+  <p class="text-lg opacity-60 mb-5">Functions the AI can call. Each tool has a contract.</p>
+  <div class="grid grid-cols-2 gap-6 mb-5">
+    <div class="p-4 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm">
+      <p class="text-orange-400 font-semibold mb-2">Tool definition</p>
+      <p class="opacity-70"><span class="text-cyan-400">name:</span> "list-tickets"</p>
+      <p class="opacity-70"><span class="text-cyan-400">description:</span> "Get Jira tickets"</p>
+      <p class="opacity-70"><span class="text-cyan-400">input:</span> { project: string }</p>
+      <p class="opacity-70"><span class="text-cyan-400">output:</span> { tickets: Ticket[] }</p>
+    </div>
+    <div class="space-y-3">
+      <div class="p-3 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-orange-400 font-semibold text-sm">Name</p>
+        <p class="opacity-50 text-xs">How the AI calls it</p>
+      </div>
+      <div class="p-3 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-orange-400 font-semibold text-sm">Description</p>
+        <p class="opacity-50 text-xs">Helps AI know when to use it</p>
+      </div>
+      <div class="p-3 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-orange-400 font-semibold text-sm">Input/Output Schema</p>
+        <p class="opacity-50 text-xs">Contract for what goes in and comes out</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-sm opacity-50 text-center">Open standard. No vendor lock-in. Build once, works everywhere.</p>
+</div>
+
+<!--
+- Tools are functions AI can call
+- Each tool has: name, description, input schema, output schema
+- Description is critical: it helps AI know WHEN to use the tool
+- Input/output schemas define the contract
+- Open standard: no vendor lock-in, same MCP works in Cursor, Claude, etc.
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-4 text-orange-400">Common MCP Servers</h2>
+  <p class="text-lg opacity-60 mb-6">Pre-built servers for popular tools</p>
   <div class="grid grid-cols-4 gap-4 mb-6">
     <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
       <p class="text-2xl mb-2">📝</p>
@@ -367,17 +451,17 @@ layout: center
     </div>
   </div>
   <div class="p-4 rounded-xl bg-orange-400/10 border border-orange-400/30">
-    <p class="text-orange-400 font-semibold mb-2">Why MCPs matter</p>
-    <p class="opacity-70 text-sm">Agent can fetch context from your actual tools. No copy-pasting tickets, no manual lookups. It reads Jira, searches Confluence, checks Slack history.</p>
+    <p class="text-orange-400 font-semibold mb-2">The power</p>
+    <p class="opacity-70 text-sm">Agent fetches context from your actual tools. No copy-pasting tickets. It reads Jira, searches Confluence, checks Slack. You can also build custom MCPs for internal APIs.</p>
   </div>
 </div>
 
 <!--
-- MCPs connect your agent to external services
-- Examples: Jira, Notion, Slack, databases
+- Pre-built MCP servers exist for common tools
+- Examples: Jira, Notion, Slack, databases, GitHub, Linear
 - Power: agent can fetch context from your actual tools
+- You can build custom MCPs for internal APIs
 - Warning: each MCP consumes context (too many = bloated)
-- We'll cover managing this in Pillar 2
 -->
 
 ---
@@ -1366,6 +1450,165 @@ layout: center
 layout: center
 ---
 
+<div class="max-w-5xl">
+  <h2 class="text-4xl font-bold mb-4 text-purple-400">The autonomy spectrum</h2>
+  <p class="text-xl opacity-60 mb-8">Where should you sit between control and speed?</p>
+  <div class="flex items-end justify-center gap-4 mb-6">
+    <div class="flex-1 p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-cyan-400 font-bold text-lg mb-2">Manual spec-driven</p>
+      <p class="opacity-50 text-xs mb-3">What you just learned</p>
+      <div class="text-sm opacity-70 space-y-1">
+        <p>✓ Full control</p>
+        <p>✓ Human reviews each phase</p>
+        <p class="text-red-400">✗ Slow — you drive every step</p>
+      </div>
+    </div>
+    <div class="flex-1 p-5 rounded-xl bg-purple-400/15 border-2 border-purple-400/50 text-center relative">
+      <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-purple-400 text-black text-xs font-bold">Sweet spot</span>
+      <p class="text-purple-400 font-bold text-lg mb-2">Smart Ralph</p>
+      <p class="opacity-50 text-xs mb-3">Structured + autonomous</p>
+      <div class="text-sm opacity-70 space-y-1">
+        <p>✓ Spec-driven structure</p>
+        <p>✓ Fully autonomous execution</p>
+        <p>✓ Outputs a PR end-to-end</p>
+      </div>
+    </div>
+    <div class="flex-1 p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+      <p class="text-amber-400 font-bold text-lg mb-2">Ralph Wiggum</p>
+      <p class="opacity-50 text-xs mb-3">YOLO agent loop</p>
+      <div class="text-sm opacity-70 space-y-1">
+        <p>✓ Fast — just let it run</p>
+        <p class="text-red-400">✗ Unpredictable output</p>
+        <p class="text-red-400">✗ No structure, no specs</p>
+      </div>
+    </div>
+  </div>
+  <div class="flex items-center justify-center gap-2 opacity-40 text-sm">
+    <span>More control</span>
+    <div class="flex-1 h-px bg-gradient-to-r from-cyan-400 via-purple-400 to-amber-400"></div>
+    <span>More speed</span>
+  </div>
+</div>
+
+<!--
+- Introduce the autonomy spectrum: manual spec-driven on one end, full YOLO autonomy on the other
+- Ralph Wiggum = autonomous agent in a loop, fast but unpredictable, no structure
+- Manual spec-driven = what we just learned, full control but you drive every step
+- Smart Ralph sits at the sweet spot: it uses the spec-driven structure but runs autonomously end-to-end
+- Key insight: you don't have to choose between control and speed — Smart Ralph gives you both
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-5xl">
+  <h2 class="text-4xl font-bold mb-4 text-purple-400">Smart Ralph workflow</h2>
+  <p class="text-xl opacity-60 mb-6">The spec-driven pipeline, fully autonomous</p>
+  <div class="flex items-center justify-center gap-3 text-base mb-6">
+    <div class="px-3 py-2 rounded-xl bg-blue-400/20 border border-blue-400/30 text-blue-400 font-semibold">Research</div>
+    <span class="text-xl opacity-40">→</span>
+    <div class="px-3 py-2 rounded-xl bg-cyan-400/20 border border-cyan-400/30 text-cyan-400 font-semibold">Requirements</div>
+    <span class="text-xl opacity-40">→</span>
+    <div class="px-3 py-2 rounded-xl bg-pink-400/20 border border-pink-400/30 text-pink-400 font-semibold">Design</div>
+    <span class="text-xl opacity-40">→</span>
+    <div class="px-3 py-2 rounded-xl bg-amber-400/20 border border-amber-400/30 text-amber-400 font-semibold">Tasks</div>
+    <span class="text-xl opacity-40">→</span>
+    <div class="px-3 py-2 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 font-semibold">Execute</div>
+    <span class="text-xl opacity-40">→</span>
+    <div class="px-3 py-2 rounded-xl bg-purple-400/20 border border-purple-400/30 text-purple-400 font-semibold">PR</div>
+  </div>
+  <div class="grid grid-cols-6 gap-2 text-center">
+    <div class="p-2 rounded-lg bg-white/5">
+      <p class="text-blue-400 font-semibold text-xs mb-1">Research</p>
+      <p class="opacity-50 text-xs">Reads codebase, indexes docs, maps conventions</p>
+    </div>
+    <div class="p-2 rounded-lg bg-white/5">
+      <p class="text-cyan-400 font-semibold text-xs mb-1">Requirements</p>
+      <p class="opacity-50 text-xs">EARS format, user stories, acceptance criteria</p>
+    </div>
+    <div class="p-2 rounded-lg bg-white/5">
+      <p class="text-pink-400 font-semibold text-xs mb-1">Design</p>
+      <p class="opacity-50 text-xs">Architecture, data model, API contracts</p>
+    </div>
+    <div class="p-2 rounded-lg bg-white/5">
+      <p class="text-amber-400 font-semibold text-xs mb-1">Tasks</p>
+      <p class="opacity-50 text-xs">Phased breakdown with parallel markers</p>
+    </div>
+    <div class="p-2 rounded-lg bg-white/5">
+      <p class="text-green-400 font-semibold text-xs mb-1">Execute</p>
+      <p class="opacity-50 text-xs">TDD, checkpoint tests, story-by-story</p>
+    </div>
+    <div class="p-2 rounded-lg bg-white/5">
+      <p class="text-purple-400 font-semibold text-xs mb-1">PR</p>
+      <p class="opacity-50 text-xs">Opens a pull request with full context</p>
+    </div>
+  </div>
+  <p class="text-center mt-4 opacity-40 text-sm">Same phases you learned manually — now running 100% autonomously as a Claude Code plugin</p>
+</div>
+
+<!--
+- Smart Ralph runs the exact same pipeline you just learned: Requirements → Design → Tasks → Execute
+- Two key additions: Research phase at the start (self-bootstrapping) and PR output at the end
+- Research phase: agent reads the codebase, indexes docs, maps existing conventions before writing any spec
+- Each phase produces a spec document that feeds into the next — same pattern, zero human intervention
+- This is spec-driven development on autopilot — structured output without manual driving
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-5xl">
+  <h2 class="text-4xl font-bold mb-4 text-purple-400">Why it works</h2>
+  <p class="text-xl opacity-60 mb-6">Docs as the source of truth</p>
+  <div class="grid grid-cols-2 gap-6">
+    <div>
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10 mb-4">
+        <p class="text-blue-400 font-semibold mb-2">/index command</p>
+        <p class="opacity-60 text-sm mb-2">Maps all external resources into the agent's context:</p>
+        <div class="font-mono text-xs opacity-50 space-y-1">
+          <p>• Confluence pages → indexed</p>
+          <p>• Figma designs → indexed</p>
+          <p>• Slack threads → indexed</p>
+          <p>• Existing codebase → indexed</p>
+        </div>
+      </div>
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+        <p class="text-purple-400 font-semibold mb-2">Spec chaining</p>
+        <p class="opacity-60 text-sm">Each new spec reads <span class="text-purple-400">all previous specs</span>. Context accumulates — nothing is lost between phases.</p>
+      </div>
+    </div>
+    <div class="space-y-3">
+      <div class="p-4 rounded-xl bg-purple-400/10 border border-purple-400/20">
+        <p class="text-purple-400 font-semibold mb-1">Deterministic, not random</p>
+        <p class="opacity-60 text-sm">Structured specs constrain the agent — output is predictable, not a YOLO guess.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-purple-400/10 border border-purple-400/20">
+        <p class="text-purple-400 font-semibold mb-1">Self-bootstrapping</p>
+        <p class="opacity-60 text-sm">Research phase means the agent builds its own context. No manual setup required.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-cyan-400/10 border border-cyan-400/20">
+        <p class="text-cyan-400 font-semibold mb-1">Pillar 1 on autopilot</p>
+        <p class="opacity-60 text-sm">Remember indexing external resources? Smart Ralph does it automatically via <span class="text-cyan-400">/index</span>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+- Two mechanisms make Smart Ralph work: /index command and spec chaining
+- /index maps all external resources (Confluence, Figma, Slack, codebase) into the agent's context
+- This is Pillar 1 (indexing) running on autopilot — the agent bootstraps its own context
+- Spec chaining: each phase reads all previous spec documents, so context accumulates across phases
+- Result: deterministic output (specs constrain the agent) and self-bootstrapping (no manual setup)
+- This ties directly back to Pillar 1 — if indexing is the foundation, Smart Ralph automates it
+-->
+
+---
+layout: center
+---
+
 <div class="flex flex-col items-center gap-6">
   <p class="text-lg opacity-50">Now that we have our workflow...</p>
   <p class="text-5xl font-bold text-amber-400">Patterns for execution</p>
@@ -1374,6 +1617,7 @@ layout: center
 
 <!--
 - Segue: now let's talk about execution patterns
+- Whether you run the workflow manually or via Smart Ralph, these patterns apply
 - Fresh Chat Protocol: new session for each major phase
 - These are the habits that make the workflow work
 -->
