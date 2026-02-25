@@ -472,7 +472,7 @@ layout: center
   <h2 class="text-3xl font-bold mb-4 text-purple-400">Agent Modes</h2>
   <p class="text-lg opacity-60 mb-6">Different modes for different tasks</p>
   <div class="flex gap-6 items-start">
-    <img src="/images/agent-modes.png" class="rounded-xl shadow-lg max-h-48" />
+    <img src="/static/agent-modes.png" class="rounded-xl shadow-lg max-h-48" />
     <div class="grid grid-cols-2 gap-4 flex-1">
       <div class="p-4 rounded-xl bg-white/5 border border-white/10">
         <p class="text-purple-400 font-semibold mb-1">Agent</p>
@@ -1081,7 +1081,7 @@ layout: center
       <p class="text-sm opacity-60">The LLM doesn't have your mental model.<br/>It will interpret literally.</p>
     </div>
     <div class="flex items-center justify-center">
-      <img src="/images/slice-of-cake.png" class="rounded-xl max-h-72 shadow-2xl" />
+      <img src="/static/slice-of-cake.png" class="rounded-xl max-h-72 shadow-2xl" />
     </div>
   </div>
 </div>
@@ -1635,7 +1635,7 @@ layout: center
     <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-cyan-400 font-mono">New chat</span>
   </div>
   <div class="flex gap-6 items-center">
-    <img src="/images/lost-in-the-middle.png" class="rounded-xl max-h-80 shadow-2xl" />
+    <img src="/static/lost-in-the-middle.png" class="rounded-xl max-h-80 shadow-2xl" />
     <div class="flex-1">
       <p class="text-amber-400 font-bold text-xl mb-3">⚠️ Lost in the middle</p>
       <p class="opacity-80 text-lg leading-relaxed">LLMs struggle with information buried in long conversations. Important context at the start or middle gets "forgotten".</p>
@@ -1665,7 +1665,7 @@ layout: center
   <p class="text-lg opacity-60 mb-4">More tools = less space for your actual work</p>
   <div class="grid grid-cols-2 gap-6 items-center">
     <div class="flex justify-center">
-      <img src="/images/mcp-context-bloat.jpeg" class="rounded-xl max-h-56 shadow-2xl" />
+      <img src="/static/mcp-context-bloat.jpeg" class="rounded-xl max-h-56 shadow-2xl" />
     </div>
     <div class="space-y-3">
       <div class="p-3 rounded-xl bg-red-500/10 border border-red-500/30">
@@ -1768,7 +1768,7 @@ layout: center
       </div>
     </div>
     <div class="flex flex-col items-center">
-      <img src="/images/worktree.png" class="rounded-xl shadow-2xl max-h-48" />
+      <img src="/static/worktree.png" class="rounded-xl shadow-2xl max-h-48" />
       <p class="text-xs opacity-50 mt-2">Cursor worktree selector</p>
     </div>
   </div>
@@ -1780,6 +1780,42 @@ layout: center
 - Cursor: Background Agents do this automatically
 - Claude Code: manual worktree setup required
 - Benefit: work on multiple features without blocking, review PRs as they come in
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-3xl text-center flex flex-col gap-8">
+  <p class="text-3xl font-bold text-purple-400">Parallel Workflows — Kickoff</p>
+  <p class="opacity-60 text-lg">Kicking off agent work in the background while speccing the next feature</p>
+  <video controls class="rounded-xl shadow-2xl max-h-96 mx-auto">
+    <source src="/static/ai_demo_1.mp4" type="video/mp4" />
+  </video>
+</div>
+
+<!--
+- Demo: starting multiple agents working on different features simultaneously
+- While one agent implements, you can spec the next feature
+- Real parallel development in action
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-3xl text-center flex flex-col gap-8">
+  <p class="text-3xl font-bold text-purple-400">Parallel Workflows — Results</p>
+  <p class="opacity-60 text-lg">Seeing what agents accomplished while we were working</p>
+  <video controls class="rounded-xl shadow-2xl max-h-96 mx-auto">
+    <source src="/static/ai_demo_2.mp4" type="video/mp4" />
+  </video>
+</div>
+
+<!--
+- Demo: reviewing the output from parallel agent work
+- Multiple PRs ready for review from different agents
+- Spec-driven approach ensures consistent quality across parallel tracks
 -->
 
 ---
@@ -1888,7 +1924,7 @@ layout: center
   <p class="text-6xl font-bold mb-6">Thank you!</p>
   <p class="text-2xl opacity-60 mb-8">Questions?</p>
   <div class="flex justify-center items-center gap-8">
-    <img src="/images/qr-link.png" class="w-48 h-48 rounded-xl" />
+    <img src="/static/qr-link.png" class="w-48 h-48 rounded-xl" />
     <div class="text-left">
       <p class="text-lg opacity-80">Scan for the Cookbook</p>
       <p class="text-sm opacity-50">tzachbon.github.io/dev-workflows-with-agents</p>
