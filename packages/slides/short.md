@@ -112,19 +112,71 @@ layout: center
 ---
 
 <div class="max-w-4xl">
-  <h2 class="text-3xl font-bold mb-6 text-[#FFC800]">What We Built</h2>
-  <div class="grid grid-cols-2 gap-4">
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+  <h2 class="text-3xl font-bold mb-8 text-[#FFC800] text-center">The Principles</h2>
+  <div class="relative flex flex-col items-center gap-4">
+    <!-- Main flow: Context → Agent → Output -->
+    <div class="flex items-center justify-center gap-4">
+      <div class="px-5 py-3 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30 text-[#FFC800] font-semibold">Context</div>
+      <span class="text-xl opacity-40">&rarr;</span>
+      <div class="px-6 py-4 rounded-xl bg-white/10 border-2 border-white/20 text-white font-bold text-lg">Agent</div>
+      <span class="text-xl opacity-40">&rarr;</span>
+      <div class="px-5 py-3 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30 text-[#FFC800] font-semibold">Output</div>
+    </div>
+    <!-- Feedback loop -->
+    <div class="flex items-center justify-center gap-3">
+      <div class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/70">Tooling</div>
+      <span class="opacity-30">&middot;</span>
+      <div class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/70">Tests</div>
+      <span class="opacity-30">&middot;</span>
+      <div class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/70">Types</div>
+    </div>
+    <p class="text-sm opacity-30 mt-1">&uarr; feedback loop &mdash; agent sees errors, self-corrects &darr;</p>
+  </div>
+  <div class="flex justify-center gap-6 mt-8 text-sm opacity-50">
+    <span><span class="text-[#FFC800]">Index</span> your repo</span>
+    <span>&middot;</span>
+    <span>Let <span class="text-[#FFC800]">tooling</span> enforce</span>
+    <span>&middot;</span>
+    <span><span class="text-[#FFC800]">Tests</span> as feedback</span>
+    <span>&middot;</span>
+    <span><span class="text-[#FFC800]">Types</span> as docs</span>
+  </div>
+</div>
+
+<!--
+- Four principles that guide how we prepare repos for agents
+- Index once: rule files at every level of the repo, agent finds context instantly instead of scanning everything
+- Let tooling enforce: linters, type checkers, formatters — the agent sees errors and self-corrects. Rule files are for guidance, not enforcement.
+- Tests as feedback loops: agent writes code, tests fail, agent reads error, fixes — no human in the loop. You're not the bottleneck.
+- Types as documentation: typed functions tell the agent exactly what to expect. Untyped code forces guessing.
+-->
+
+---
+layout: center
+---
+
+<div class="max-w-4xl">
+  <h2 class="text-3xl font-bold mb-5 text-[#FFC800]">What We Built</h2>
+  <div class="space-y-2">
+    <div class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
+      <span class="text-[#FFC800] shrink-0 font-bold">1</span>
       <p class="text-white font-semibold">AGENTS.md at every level</p>
+      <p class="opacity-40 text-sm ml-auto">context, code style, commands</p>
     </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+    <div class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
+      <span class="text-[#FFC800] shrink-0 font-bold">2</span>
       <p class="text-white font-semibold">Custom Skills</p>
+      <p class="opacity-40 text-sm ml-auto">coding standards, scaffolding, changesets</p>
     </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+    <div class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
+      <span class="text-[#FFC800] shrink-0 font-bold">3</span>
       <p class="text-white font-semibold">Sub-agents</p>
+      <p class="opacity-40 text-sm ml-auto">planner, architect, reviewer, auditor</p>
     </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+    <div class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
+      <span class="text-[#FFC800] shrink-0 font-bold">4</span>
       <p class="text-white font-semibold">Quality Gates</p>
+      <p class="opacity-40 text-sm ml-auto">tests, types, lint — enforced</p>
     </div>
   </div>
 </div>
@@ -177,30 +229,36 @@ layout: center
 ---
 
 <div class="max-w-4xl">
-  <h2 class="text-3xl font-bold mb-6 text-[#FFC800]">Traction & Recognition</h2>
-  <div class="space-y-4">
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-center gap-4">
-      <p class="font-semibold">Igor's AI Agent System for ACC Web Platform</p>
+  <h2 class="text-3xl font-bold mb-6 text-[#FFC800]">The Impact</h2>
+  <div class="grid grid-cols-2 gap-6">
+    <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-[#a3a3a3] font-semibold mb-4">Before</p>
+      <div class="space-y-3 text-sm">
+        <p class="opacity-60">Teams wait for us to onboard them</p>
+        <p class="opacity-60">Migration guides go unread</p>
+        <p class="opacity-60">Support tickets for every integration</p>
+      </div>
     </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-center gap-4">
-      <p class="font-semibold">Architect's Forum Invitation</p>
+    <div class="p-5 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30">
+      <p class="text-[#FFC800] font-semibold mb-4">After</p>
+      <div class="space-y-3 text-sm">
+        <p class="opacity-80">Agent invokes onboarding skill, self-onboards</p>
+        <p class="opacity-80">Migration agent automates the upgrade</p>
+        <p class="opacity-80">Teams adopt without hand-holding</p>
+      </div>
     </div>
-    <div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-center gap-4">
-      <p class="font-semibold">Organic Adoption Across Teams</p>
-    </div>
+  </div>
+  <div class="mt-6 p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+    <p class="text-sm opacity-70">Adoption is faster. Support burden drops. Teams onboard without waiting for us.</p>
   </div>
 </div>
 
 <!--
-- First group in the organization to implement this and achieve results
-- Igor: Comprehensive documentation and implementation. Published to Confluence and shared across the organization. Strong positive feedback from multiple teams.
-- Architect's Forum: Don Whittle invited us to present — recognizing the approach as something the broader organization should learn from.
-- Organic adoption: MC Engineering shared it as "a great foundation." Mobile team built their own .agents/ system. AutoCAD backend created an AI dev kit. APS exploring spec-driven development. Multiple teams independently adopting the patterns.
-- Ben Burlingham from MC Engineering shared Igor's work as "a solid read" and "a great foundation"
-- Shalom from mobile built an entire .agents/ system for their monorepo, inspired by this approach
-- AutoCAD backend created their own AI dev kit repo
-- APS One Graph team exploring spec-driven development for their hackathon
-- We're not just doing this for ourselves — the org is taking notice
+- The before/after of agent-first output
+- Before: teams depend on us for onboarding, migration guides collect dust, every integration generates support tickets
+- After: their agent invokes our onboarding skill and gets up to speed autonomously. Migration agent handles the upgrade. Integration happens without hand-holding.
+- The result: adoption is faster, support burden drops, and our platform work scales beyond our team's bandwidth
+- This is the multiplier effect — we build once, agents distribute
 -->
 
 ---
