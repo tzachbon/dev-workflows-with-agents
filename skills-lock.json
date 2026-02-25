@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "slidev": {
+      "source": "antfu/skills",
+      "sourceType": "github",
+      "computedHash": "1b3993d6c923a6c35771d0f26f3e47a15aa6b4f7c3e46f16d5ce3e864fab84cd"
+    },
+    "storytelling-synthesizer": {
+      "source": "rysweet/amplihack",
+      "sourceType": "github",
+      "computedHash": "eaa3ad4ddbb8011cb3597782af5330a32e8fec34591e9f17e9ddb5d0fa006752"
+    }
+  }
+}

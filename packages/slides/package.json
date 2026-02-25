@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev",
-    "review": "slidev review.md",
+    "short": "slidev short.md",
     "build": "slidev build",
     "export": "slidev export"
   },

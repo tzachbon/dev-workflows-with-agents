@@ -6,6 +6,6 @@
   ],
   "scripts": {
     "dev": "npm run dev --workspaces",
-    "review": "npm run review --workspace=packages/slides"
+    "dev-short": "npm run short --workspace=packages/slides"
   }
 }
