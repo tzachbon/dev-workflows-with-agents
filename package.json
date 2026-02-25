@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "npm run dev --workspaces"
+    "dev": "npm run dev --workspaces",
+    "review": "npm run review --workspace=packages/slides"
   }
 }
