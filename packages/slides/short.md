@@ -31,9 +31,10 @@ layout: center
 <div class="max-w-3xl">
   <h2 class="text-4xl font-bold mb-8 text-[#FFC800]">The Problem</h2>
   <div class="space-y-4 text-2xl leading-relaxed">
-    <p class="opacity-90">But without structure, their output is <span class="text-white font-semibold">inconsistent and unpredictable</span>.</p>
+    <p class="opacity-90">AI agents are powerful — every developer uses them.</p>
+    <p v-click class="opacity-90">But without structure, their output is <span class="text-white font-semibold">inconsistent and unpredictable</span>.</p>
   </div>
-  <div class="mt-10 p-5 rounded-xl bg-white/5 border border-white/10">
+  <div v-click class="mt-10 p-5 rounded-xl bg-white/5 border border-white/10">
     <p class="text-xl"><span class="text-white font-semibold">The insight:</span> It's all a game of <span class="text-[#FFC800] font-semibold">context management</span> and making the output <span class="text-[#FFC800] font-semibold">more deterministic</span>.</p>
   </div>
 </div>
@@ -53,15 +54,15 @@ layout: center
   <p class="text-xl text-[#a3a3a3] mb-4">Our Goal</p>
   <p class="text-3xl font-bold leading-snug mb-6">Make the agent a <span class="text-[#FFC800]">first-class citizen</span><br/>in our development process.</p>
   <div class="grid grid-cols-3 gap-6 max-w-3xl mx-auto mt-6">
-    <div class="text-center p-5 rounded-2xl bg-white/5 border border-white/10">
+    <div v-click class="text-center p-5 rounded-2xl bg-white/5 border border-white/10">
       <p class="text-base text-[#a3a3a3] mb-1">Pillar 1</p>
       <p class="text-xl font-bold text-white leading-snug">Prepare Your<br/>Repo for <span class="text-[#FFC800]">Agents</span></p>
     </div>
-    <div class="text-center p-5 rounded-2xl bg-white/5 border border-white/10">
+    <div v-click class="text-center p-5 rounded-2xl bg-white/5 border border-white/10">
       <p class="text-base text-[#a3a3a3] mb-1">Pillar 2</p>
       <p class="text-xl font-bold text-white leading-snug"><span class="text-[#FFC800]">Agent</span>-First<br/>Output</p>
     </div>
-    <div class="text-center p-5 rounded-2xl bg-white/5 border border-white/10">
+    <div v-click class="text-center p-5 rounded-2xl bg-white/5 border border-white/10">
       <p class="text-base text-[#a3a3a3] mb-1">Pillar 3</p>
       <p class="text-xl font-bold text-white leading-snug">Working with<br/><span class="text-[#FFC800]">Agents</span></p>
     </div>
@@ -115,7 +116,7 @@ layout: center
   <h2 class="text-3xl font-bold mb-8 text-[#FFC800] text-center">The Principles</h2>
   <div class="relative flex flex-col items-center gap-4">
     <!-- Main flow: Context → Agent → Output -->
-    <div class="flex items-center justify-center gap-4">
+    <div v-click class="flex items-center justify-center gap-4">
       <div class="px-5 py-3 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30 text-[#FFC800] font-semibold">Context</div>
       <span class="text-xl opacity-40">&rarr;</span>
       <div class="px-6 py-4 rounded-xl bg-white/10 border-2 border-white/20 text-white font-bold text-lg">Agent</div>
@@ -123,16 +124,16 @@ layout: center
       <div class="px-5 py-3 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30 text-[#FFC800] font-semibold">Output</div>
     </div>
     <!-- Feedback loop -->
-    <div class="flex items-center justify-center gap-3">
+    <div v-click class="flex items-center justify-center gap-3">
       <div class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/70">Tooling</div>
       <span class="opacity-30">&middot;</span>
       <div class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/70">Tests</div>
       <span class="opacity-30">&middot;</span>
       <div class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/70">Types</div>
     </div>
-    <p class="text-sm opacity-30 mt-1">&uarr; feedback loop &mdash; agent sees errors, self-corrects &darr;</p>
+    <p v-after class="text-sm opacity-30 mt-1">&uarr; feedback loop &mdash; agent sees errors, self-corrects &darr;</p>
   </div>
-  <div class="flex justify-center gap-6 mt-8 text-sm opacity-50">
+  <div v-click class="flex justify-center gap-6 mt-8 text-sm opacity-50">
     <span><span class="text-[#FFC800]">Index</span> your repo</span>
     <span>&middot;</span>
     <span>Let <span class="text-[#FFC800]">tooling</span> enforce</span>
@@ -158,22 +159,22 @@ layout: center
 <div class="max-w-4xl">
   <h2 class="text-3xl font-bold mb-5 text-[#FFC800]">What We Built</h2>
   <div class="space-y-2">
-    <div class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
+    <div v-click class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
       <span class="text-[#FFC800] shrink-0 font-bold">1</span>
       <p class="text-white font-semibold">AGENTS.md at every level</p>
       <p class="opacity-40 text-sm ml-auto">context, code style, commands</p>
     </div>
-    <div class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
+    <div v-click class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
       <span class="text-[#FFC800] shrink-0 font-bold">2</span>
       <p class="text-white font-semibold">Custom Skills</p>
       <p class="opacity-40 text-sm ml-auto">coding standards, scaffolding, changesets</p>
     </div>
-    <div class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
+    <div v-click class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
       <span class="text-[#FFC800] shrink-0 font-bold">3</span>
       <p class="text-white font-semibold">Sub-agents</p>
       <p class="opacity-40 text-sm ml-auto">planner, architect, reviewer, auditor</p>
     </div>
-    <div class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
+    <div v-click class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10">
       <span class="text-[#FFC800] shrink-0 font-bold">4</span>
       <p class="text-white font-semibold">Quality Gates</p>
       <p class="opacity-40 text-sm ml-auto">tests, types, lint — enforced</p>
@@ -202,12 +203,14 @@ layout: center
   <p class="text-lg text-[#a3a3a3] mb-10">When we ship platform work, we ship agent tooling with it.</p>
   <div class="flex items-center justify-center gap-6">
     <div class="flex flex-col gap-3">
+      <p class="text-sm opacity-50 mb-0">What we ship</p>
       <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-lg font-semibold">New SDK</div>
       <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-lg font-semibold">Migration Tool</div>
       <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-lg font-semibold">Shared Library</div>
     </div>
-    <div class="text-3xl opacity-40">&rarr;</div>
-    <div class="flex flex-col gap-3">
+    <div v-click class="text-3xl opacity-40">&rarr;</div>
+    <div v-after class="flex flex-col gap-3">
+      <p class="text-sm opacity-50 mb-0 text-[#FFC800]">Agent tooling</p>
       <div class="px-5 py-3 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30 text-lg font-semibold text-[#FFC800]">Onboarding Skill</div>
       <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-lg font-semibold text-white">Migration Agent</div>
       <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-lg font-semibold text-white">Integration Guide</div>
@@ -239,7 +242,7 @@ layout: center
         <p class="opacity-60">Support tickets for every integration</p>
       </div>
     </div>
-    <div class="p-5 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30">
+    <div v-click class="p-5 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30">
       <p class="text-[#FFC800] font-semibold mb-4">After</p>
       <div class="space-y-3 text-sm">
         <p class="opacity-80">Agent invokes onboarding skill, self-onboards</p>
@@ -248,7 +251,7 @@ layout: center
       </div>
     </div>
   </div>
-  <div class="mt-6 p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+  <div v-click class="mt-6 p-4 rounded-xl bg-white/5 border border-white/10 text-center">
     <p class="text-sm opacity-70">Adoption is faster. Support burden drops. Teams onboard without waiting for us.</p>
   </div>
 </div>
@@ -303,22 +306,22 @@ layout: center
   <h2 class="text-4xl font-bold mb-6 text-[#FFC800]">This Unlocks Parallelism</h2>
   <p class="text-xl text-[#666666] mb-8">One developer. Multiple features in flight.</p>
   <div class="flex items-center justify-center gap-4 mb-8">
-    <div class="flex flex-col items-center gap-2">
+    <div v-click class="flex flex-col items-center gap-2">
       <div class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold text-sm">You: spec Feature B</div>
       <div class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold text-sm">You: spec Feature C</div>
     </div>
-    <div class="flex flex-col items-center gap-1">
+    <div v-click class="flex flex-col items-center gap-1">
       <span class="opacity-40 text-sm">meanwhile</span>
       <span class="text-2xl opacity-40">&harr;</span>
     </div>
-    <div class="flex flex-col items-center gap-2">
+    <div v-after class="flex flex-col items-center gap-2">
       <div class="px-4 py-3 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30 text-[#FFC800] font-semibold text-sm">Agent: executes Feature A</div>
       <div class="px-4 py-3 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30 text-[#FFC800] font-semibold text-sm">Agent: executes Feature B</div>
     </div>
-    <div class="flex flex-col items-center gap-1">
+    <div v-click class="flex flex-col items-center gap-1">
       <span class="opacity-40">&rarr;</span>
     </div>
-    <div class="flex flex-col items-center gap-2">
+    <div v-after class="flex flex-col items-center gap-2">
       <div class="px-3 py-2 rounded-lg bg-white/10 text-white text-sm">PR</div>
       <div class="px-3 py-2 rounded-lg bg-white/10 text-white text-sm">PR</div>
     </div>
@@ -357,9 +360,16 @@ layout: center
 <div class="max-w-3xl text-center flex flex-col gap-8">
   <p class="text-3xl font-bold text-[#FFC800]">Parallel Workflows — Kickoff</p>
   <p class="opacity-60 text-lg">Kicking off agent work in the background while speccing the next feature</p>
-  <video controls class="rounded-xl shadow-2xl max-h-96 mx-auto">
+  <video controls class="rounded-xl shadow-2xl max-h-72 mx-auto">
     <source src="/static/ai_demo_1.mp4" type="video/mp4" />
   </video>
+  <div v-click class="flex justify-center gap-6 mt-4 text-sm opacity-50">
+    <span>Agent starts from spec</span>
+    <span>&middot;</span>
+    <span>Dev specs the next feature</span>
+    <span>&middot;</span>
+    <span>No context-switching</span>
+  </div>
 </div>
 
 <!--
@@ -375,9 +385,16 @@ layout: center
 <div class="max-w-3xl text-center flex flex-col gap-8">
   <p class="text-3xl font-bold text-[#FFC800]">Parallel Workflows — Results</p>
   <p class="opacity-60 text-lg">Seeing what agents accomplished while we were working</p>
-  <video controls class="rounded-xl shadow-2xl max-h-96 mx-auto">
+  <video controls class="rounded-xl shadow-2xl max-h-72 mx-auto">
     <source src="/static/ai_demo_2.mp4" type="video/mp4" />
   </video>
+  <div v-click class="flex justify-center gap-6 mt-4 text-sm opacity-50">
+    <span>Multiple PRs ready</span>
+    <span>&middot;</span>
+    <span>Each follows the spec</span>
+    <span>&middot;</span>
+    <span>One developer, parallel delivery</span>
+  </div>
 </div>
 
 <!--
@@ -406,6 +423,7 @@ layout: center
       <p class="font-semibold">Every workflow, <span class="text-[#FFC800]">agent-partnered</span></p>
     </div>
   </div>
+  <p v-click class="mt-8 text-lg text-center opacity-60 italic">We're not just writing code — we're building a system that multiplies our impact.</p>
 </div>
 
 <!--
