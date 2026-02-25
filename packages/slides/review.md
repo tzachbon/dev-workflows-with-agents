@@ -9,12 +9,13 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
+fonts:
+  sans: 'ArtifaktElement, Arial, sans-serif'
 ---
 
 <div class="flex flex-col items-center justify-center h-full">
-  <p class="text-lg opacity-50 mb-4">Review Presentation</p>
   <h1 class="text-5xl font-bold !leading-tight">Agent-Oriented<br/>Development</h1>
-  <p class="text-xl opacity-60 mt-6">How we changed the way we work</p>
+  <p class="text-xl text-[#666666] mt-6">How we changed the way we work</p>
 
 </div>
 
@@ -28,12 +29,12 @@ layout: center
 ---
 
 <div class="max-w-3xl">
-  <h2 class="text-4xl font-bold mb-8 text-red-400">The Problem</h2>
+  <h2 class="text-4xl font-bold mb-8 text-[#FFC800]">The Problem</h2>
   <div class="space-y-4 text-2xl leading-relaxed">
-    <p class="opacity-90">But without structure, their output is <span class="text-red-400 font-semibold">inconsistent and unpredictable</span>.</p>
+    <p class="opacity-90">But without structure, their output is <span class="text-white font-semibold">inconsistent and unpredictable</span>.</p>
   </div>
-  <div class="mt-10 p-5 rounded-xl bg-purple-400/10 border border-purple-400/30">
-    <p class="text-xl"><span class="text-purple-400 font-semibold">The insight:</span> It's all a game of <span class="text-purple-400 font-semibold">context management</span> and making the output <span class="text-purple-400 font-semibold">more deterministic</span>.</p>
+  <div class="mt-10 p-5 rounded-xl bg-white/5 border border-white/10">
+    <p class="text-xl"><span class="text-white font-semibold">The insight:</span> It's all a game of <span class="text-[#FFC800] font-semibold">context management</span> and making the output <span class="text-[#FFC800] font-semibold">more deterministic</span>.</p>
   </div>
 </div>
 
@@ -49,20 +50,20 @@ layout: center
 ---
 
 <div class="max-w-4xl text-center">
-  <p class="text-2xl opacity-50 mb-6">Our Goal</p>
-  <p class="text-4xl font-bold leading-relaxed mb-8">Make the agent a <span class="text-cyan-400">first-class citizen</span><br/>in our development process.</p>
-  <div class="grid grid-cols-3 gap-8 max-w-3xl mx-auto mt-8">
-    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
-      <p class="text-lg opacity-50 mb-2">Pillar 1</p>
-      <p class="text-2xl font-bold text-cyan-400 leading-relaxed">Prepare Your<br/>Repo for Agents</p>
+  <p class="text-xl text-[#a3a3a3] mb-4">Our Goal</p>
+  <p class="text-3xl font-bold leading-snug mb-6">Make the agent a <span class="text-[#FFC800]">first-class citizen</span><br/>in our development process.</p>
+  <div class="grid grid-cols-3 gap-6 max-w-3xl mx-auto mt-6">
+    <div class="text-center p-5 rounded-2xl bg-white/5 border border-white/10">
+      <p class="text-base text-[#a3a3a3] mb-1">Pillar 1</p>
+      <p class="text-xl font-bold text-white leading-snug">Prepare Your<br/>Repo for <span class="text-[#FFC800]">Agents</span></p>
     </div>
-    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
-      <p class="text-lg opacity-50 mb-2">Pillar 2</p>
-      <p class="text-2xl font-bold text-green-400 leading-relaxed">Agent-First<br/>Output</p>
+    <div class="text-center p-5 rounded-2xl bg-white/5 border border-white/10">
+      <p class="text-base text-[#a3a3a3] mb-1">Pillar 2</p>
+      <p class="text-xl font-bold text-white leading-snug"><span class="text-[#FFC800]">Agent</span>-First<br/>Output</p>
     </div>
-    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
-      <p class="text-lg opacity-50 mb-2">Pillar 3</p>
-      <p class="text-2xl font-bold text-pink-400 leading-relaxed">Working with<br/>Agents</p>
+    <div class="text-center p-5 rounded-2xl bg-white/5 border border-white/10">
+      <p class="text-base text-[#a3a3a3] mb-1">Pillar 3</p>
+      <p class="text-xl font-bold text-white leading-snug">Working with<br/><span class="text-[#FFC800]">Agents</span></p>
     </div>
   </div>
 </div>
@@ -80,23 +81,20 @@ layout: center
 ---
 
 <div class="max-w-4xl">
-  <h2 class="text-4xl font-bold mb-6 text-cyan-400">Pillar 1: Prepare Your Repo for Agents</h2>
+  <h2 class="text-4xl font-bold mb-6 text-[#FFC800]">Pillar 1: Prepare Your Repo for Agents</h2>
   <div class="flex items-center gap-6 mb-6">
-    <div class="p-4 rounded-xl bg-cyan-400/10 border border-cyan-400/30 shrink-0">
-      <p class="text-3xl leading-none">&#x1F5C4;&#xFE0F;</p>
-    </div>
     <div>
       <p class="text-2xl font-semibold">Think of it like database indexes</p>
     </div>
   </div>
-  <div class="p-5 rounded-xl bg-[#1a1a2e] border border-white/10 font-mono text-sm leading-relaxed mb-5">
-    <p class="opacity-70">&#x1F4C1; <span class="text-white">product-experience-backend/</span></p>
-    <p class="opacity-70 ml-4">&boxvr;&boxh; <span class="text-cyan-400 font-semibold">AGENTS.md</span></p>
-    <p class="opacity-70 ml-4">&boxvr;&boxh; &#x1F4C1; services/</p>
-    <p class="opacity-70 ml-8">&boxv;   &boxvr;&boxh; saved-filters/ &rarr; <span class="text-cyan-400 font-semibold">AGENTS.md</span></p>
-    <p class="opacity-70 ml-8">&boxv;   &boxur;&boxh; notifications/ &rarr; <span class="text-cyan-400 font-semibold">AGENTS.md</span></p>
-    <p class="opacity-70 ml-4">&boxur;&boxh; &#x1F4C1; packages/</p>
-    <p class="opacity-70 ml-8">    &boxur;&boxh; logger/ &rarr; <span class="text-cyan-400 font-semibold">AGENTS.md</span></p>
+  <div class="p-5 rounded-xl bg-[#111111] border border-white/10 font-mono text-sm leading-relaxed mb-5">
+    <p class="opacity-70"><span class="text-white">product-experience-backend/</span></p>
+    <p class="opacity-70 ml-4">&boxvr;&boxh; <span class="text-[#FFC800] font-semibold">AGENTS.md</span></p>
+    <p class="opacity-70 ml-4">&boxvr;&boxh; services/</p>
+    <p class="opacity-70 ml-8">&boxv;   &boxvr;&boxh; saved-filters/ &rarr; <span class="text-[#FFC800] font-semibold">AGENTS.md</span></p>
+    <p class="opacity-70 ml-8">&boxv;   &boxur;&boxh; notifications/ &rarr; <span class="text-[#FFC800] font-semibold">AGENTS.md</span></p>
+    <p class="opacity-70 ml-4">&boxur;&boxh; packages/</p>
+    <p class="opacity-70 ml-8">    &boxur;&boxh; logger/ &rarr; <span class="text-[#FFC800] font-semibold">AGENTS.md</span></p>
   </div>
 </div>
 
@@ -114,19 +112,19 @@ layout: center
 ---
 
 <div class="max-w-4xl">
-  <h2 class="text-3xl font-bold mb-6 text-cyan-400">What We Built</h2>
+  <h2 class="text-3xl font-bold mb-6 text-[#FFC800]">What We Built</h2>
   <div class="grid grid-cols-2 gap-4">
-    <div class="p-4 rounded-xl bg-cyan-400/10 border border-cyan-400/30">
-      <p class="text-cyan-400 font-semibold">AGENTS.md at every level</p>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-white font-semibold">AGENTS.md at every level</p>
     </div>
-    <div class="p-4 rounded-xl bg-pink-400/10 border border-pink-400/30">
-      <p class="text-pink-400 font-semibold">Custom Skills</p>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-white font-semibold">Custom Skills</p>
     </div>
-    <div class="p-4 rounded-xl bg-purple-400/10 border border-purple-400/30">
-      <p class="text-purple-400 font-semibold">Sub-agents</p>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-white font-semibold">Sub-agents</p>
     </div>
-    <div class="p-4 rounded-xl bg-amber-400/10 border border-amber-400/30">
-      <p class="text-amber-400 font-semibold">Quality Gates</p>
+    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+      <p class="text-white font-semibold">Quality Gates</p>
     </div>
   </div>
 </div>
@@ -148,8 +146,8 @@ layout: center
 ---
 
 <div class="max-w-5xl">
-  <h2 class="text-4xl font-bold mb-4 text-green-400">Pillar 2: Agent-First Output</h2>
-  <p class="text-lg opacity-50 mb-10">When we ship platform work, we ship agent tooling with it.</p>
+  <h2 class="text-4xl font-bold mb-4 text-[#FFC800]">Pillar 2: Agent-First Output</h2>
+  <p class="text-lg text-[#a3a3a3] mb-10">When we ship platform work, we ship agent tooling with it.</p>
   <div class="flex items-center justify-center gap-6">
     <div class="flex flex-col gap-3">
       <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-lg font-semibold">New SDK</div>
@@ -158,9 +156,9 @@ layout: center
     </div>
     <div class="text-3xl opacity-40">&rarr;</div>
     <div class="flex flex-col gap-3">
-      <div class="px-5 py-3 rounded-xl bg-green-400/10 border border-green-400/30 text-lg font-semibold text-green-400">Onboarding Skill</div>
-      <div class="px-5 py-3 rounded-xl bg-green-400/10 border border-green-400/30 text-lg font-semibold text-green-400">Migration Agent</div>
-      <div class="px-5 py-3 rounded-xl bg-green-400/10 border border-green-400/30 text-lg font-semibold text-green-400">Integration Guide</div>
+      <div class="px-5 py-3 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30 text-lg font-semibold text-[#FFC800]">Onboarding Skill</div>
+      <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-lg font-semibold text-white">Migration Agent</div>
+      <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-lg font-semibold text-white">Integration Guide</div>
     </div>
   </div>
 </div>
@@ -179,18 +177,15 @@ layout: center
 ---
 
 <div class="max-w-4xl">
-  <h2 class="text-3xl font-bold mb-6 text-green-400">Traction & Recognition</h2>
+  <h2 class="text-3xl font-bold mb-6 text-[#FFC800]">Traction & Recognition</h2>
   <div class="space-y-4">
     <div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-center gap-4">
-      <div class="text-2xl shrink-0 leading-none">&#x1F3C6;</div>
       <p class="font-semibold">Igor's AI Agent System for ACC Web Platform</p>
     </div>
     <div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-center gap-4">
-      <div class="text-2xl shrink-0 leading-none">&#x1F3E4;</div>
       <p class="font-semibold">Architect's Forum Invitation</p>
     </div>
     <div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-center gap-4">
-      <div class="text-2xl shrink-0 leading-none">&#x1F310;</div>
       <p class="font-semibold">Organic Adoption Across Teams</p>
     </div>
   </div>
@@ -213,18 +208,18 @@ layout: center
 ---
 
 <div class="max-w-5xl">
-  <h2 class="text-4xl font-bold mb-2 text-pink-400">Pillar 3: Working with Agents</h2>
-  <p class="text-lg opacity-50 mb-8">Spec-Driven Development</p>
+  <h2 class="text-4xl font-bold mb-2 text-[#FFC800]">Pillar 3: Working with Agents</h2>
+  <p class="text-lg text-[#a3a3a3] mb-8">Spec-Driven Development</p>
   <div class="flex items-center justify-center gap-3 text-base mt-6">
-    <div class="px-4 py-3 rounded-xl bg-purple-400/20 border border-purple-400/30 text-purple-400 font-semibold">Research</div>
+    <div class="px-4 py-3 rounded-xl bg-[#FFC800]/20 border border-[#FFC800]/30 text-[#FFC800] font-semibold">Research</div>
     <span class="text-xl opacity-40">&rarr;</span>
-    <div class="px-4 py-3 rounded-xl bg-cyan-400/20 border border-cyan-400/30 text-cyan-400 font-semibold">Planning</div>
+    <div class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-[#D5D5CB] font-semibold">Planning</div>
     <span class="text-xl opacity-40">&rarr;</span>
-    <div class="px-4 py-3 rounded-xl bg-pink-400/20 border border-pink-400/30 text-pink-400 font-semibold">Design</div>
+    <div class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-[#D5D5CB] font-semibold">Design</div>
     <span class="text-xl opacity-40">&rarr;</span>
-    <div class="px-4 py-3 rounded-xl bg-amber-400/20 border border-amber-400/30 text-amber-400 font-semibold">Tasks</div>
+    <div class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-[#D5D5CB] font-semibold">Tasks</div>
     <span class="text-xl opacity-40">&rarr;</span>
-    <div class="px-4 py-3 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 font-semibold">Execution</div>
+    <div class="px-4 py-3 rounded-xl bg-[#FFC800]/20 border border-[#FFC800]/30 text-[#FFC800] font-semibold">Execution</div>
   </div>
 </div>
 
@@ -247,27 +242,27 @@ layout: center
 ---
 
 <div class="max-w-4xl text-center">
-  <h2 class="text-4xl font-bold mb-6 text-green-400">This Unlocks Parallelism</h2>
-  <p class="text-xl opacity-60 mb-8">One developer. Multiple features in flight.</p>
+  <h2 class="text-4xl font-bold mb-6 text-[#FFC800]">This Unlocks Parallelism</h2>
+  <p class="text-xl text-[#666666] mb-8">One developer. Multiple features in flight.</p>
   <div class="flex items-center justify-center gap-4 mb-8">
     <div class="flex flex-col items-center gap-2">
-      <div class="px-4 py-3 rounded-xl bg-purple-400/20 border border-purple-400/30 text-purple-400 font-semibold text-sm">You: spec Feature B</div>
-      <div class="px-4 py-3 rounded-xl bg-cyan-400/20 border border-cyan-400/30 text-cyan-400 font-semibold text-sm">You: spec Feature C</div>
+      <div class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold text-sm">You: spec Feature B</div>
+      <div class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold text-sm">You: spec Feature C</div>
     </div>
     <div class="flex flex-col items-center gap-1">
       <span class="opacity-40 text-sm">meanwhile</span>
       <span class="text-2xl opacity-40">&harr;</span>
     </div>
     <div class="flex flex-col items-center gap-2">
-      <div class="px-4 py-3 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 font-semibold text-sm">Agent: executes Feature A</div>
-      <div class="px-4 py-3 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 font-semibold text-sm">Agent: executes Feature B</div>
+      <div class="px-4 py-3 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30 text-[#FFC800] font-semibold text-sm">Agent: executes Feature A</div>
+      <div class="px-4 py-3 rounded-xl bg-[#FFC800]/10 border border-[#FFC800]/30 text-[#FFC800] font-semibold text-sm">Agent: executes Feature B</div>
     </div>
     <div class="flex flex-col items-center gap-1">
       <span class="opacity-40">&rarr;</span>
     </div>
     <div class="flex flex-col items-center gap-2">
-      <div class="px-3 py-2 rounded-lg bg-white/10 text-sm">PR</div>
-      <div class="px-3 py-2 rounded-lg bg-white/10 text-sm">PR</div>
+      <div class="px-3 py-2 rounded-lg bg-white/10 text-white text-sm">PR</div>
+      <div class="px-3 py-2 rounded-lg bg-white/10 text-white text-sm">PR</div>
     </div>
   </div>
 </div>
@@ -286,8 +281,8 @@ class: text-center
 ---
 
 <div class="flex flex-col items-center gap-6">
-  <p class="text-lg opacity-50">Let's see it in action</p>
-  <p class="text-4xl font-bold text-pink-400 !leading-snug">Spec-Driven Development<br/>in Practice</p>
+  <p class="text-lg text-[#a3a3a3]">Let's see it in action</p>
+  <p class="text-4xl font-bold text-[#FFC800] !leading-snug">Spec-Driven Development<br/>in Practice</p>
 </div>
 
 <!--
@@ -302,19 +297,19 @@ layout: center
 ---
 
 <div class="max-w-3xl text-center">
-  <h2 class="text-4xl font-bold mb-8 text-cyan-400">What's Next</h2>
+  <h2 class="text-4xl font-bold mb-8 text-[#FFC800]">What's Next</h2>
   <div class="space-y-4 text-left max-w-xl mx-auto">
-    <div class="flex items-center gap-4 p-4 rounded-xl bg-cyan-400/5 border border-cyan-400/20">
-      <span class="text-cyan-400 text-xl shrink-0 leading-none">&rarr;</span>
-      <p class="font-semibold">Every repo, <span class="text-cyan-400">agent-ready</span></p>
+    <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+      <span class="text-[#FFC800] text-xl shrink-0 leading-none">&rarr;</span>
+      <p class="font-semibold">Every repo, <span class="text-[#FFC800]">agent-ready</span></p>
     </div>
-    <div class="flex items-center gap-4 p-4 rounded-xl bg-green-400/5 border border-green-400/20">
-      <span class="text-green-400 text-xl shrink-0 leading-none">&rarr;</span>
-      <p class="font-semibold">Every output ships with <span class="text-green-400">agent tooling</span></p>
+    <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+      <span class="text-[#FFC800] text-xl shrink-0 leading-none">&rarr;</span>
+      <p class="font-semibold">Every output ships with <span class="text-[#FFC800]">agent tooling</span></p>
     </div>
-    <div class="flex items-center gap-4 p-4 rounded-xl bg-pink-400/5 border border-pink-400/20">
-      <span class="text-pink-400 text-xl shrink-0 leading-none">&rarr;</span>
-      <p class="font-semibold">Every workflow, <span class="text-pink-400">agent-partnered</span></p>
+    <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+      <span class="text-[#FFC800] text-xl shrink-0 leading-none">&rarr;</span>
+      <p class="font-semibold">Every workflow, <span class="text-[#FFC800]">agent-partnered</span></p>
     </div>
   </div>
 </div>
